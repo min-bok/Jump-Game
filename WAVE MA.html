@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1" />
+    <title>wave</title>
+
+    <style>
+        * {
+          outline: 0;
+          margin: 0;
+          padding: 0;
+        }
+
+        html,
+        body {
+          width: 100%;
+          height: 100%;
+          overflow:hidden;
+          background: #acc1f0;
+        }
+
+        .svg-box {
+            position: relative;
+            width: 100%;
+            height: 800px;
+        }
+
+        svg {
+            position: absolute;
+            bottom: -80px;
+            left: -120%;
+            animation: WAVEAnim1 15s infinite ease-in-out;
+        }
+
+        /* ANIMATION */
+        @keyframes WAVEAnim1 {
+            to {
+                left: -50px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="svg-box">
+        <!-- WAVE -->
+        <svg width="3000" height="888" viewBox="0 0 5648 888" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g id="MA">
+        <path id="Vector 3" d="M5000 884.403H0C149.333 564.403 576 -59.5969 1344 340.403C1568 457.07 1808 628.403 2272 228.403C2550.55 -11.7247 3049.6 -158.797 3472 340.403C4000 964.403 3888 4.40332 4464 228.403C4923.45 407.076 5000 767.07 5000 884.403Z" fill="#8CB95C"/>
+        <path id="Vector 2" d="M2704 411.999C2072 -140.001 1232 811.998 1200 883.998H5200V515.998C4520 843.998 4640 148 4128 11.9998C3616 -124 3336 963.999 2704 411.999Z" fill="#DDE26A"/>
+        <path id="Vector 1" d="M5648 888H648C797.333 568 1224 -56.0002 1992 344C2216 460.666 2456 632 2920 232C3198.55 -8.12799 3697.6 -155.2 4120 344C4648 968 4536 8 5112 232C5571.45 410.673 5648 770.666 5648 888Z" fill="#AECF67"/>
+        </g>
+        </svg>
+    </div>
+
+</body>
+
+</html>
