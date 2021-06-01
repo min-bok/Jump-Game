@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNTIL GAMEOVER</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <span id="bg">
+        <img src="bg.png" width="1280px" height="580px">
+    </span>
+    <div>
+    <span class="title">
+        UNTIL<br>
+        GAMEOVER
+    </span>
+    <span id="start"> 
+        <a href="A.html">START</a>
+    </span>
+</div>
+    <span id="mushroom">
+        <img src="ms.png" width="83px" height="80px">
+    </span>
+    <span id="gbox">
+        <img src="gbox.png" width="283px" height="106px">
+    </span>
+
+    <div class="coins">
+        <span id="coin">
+            <img src="coin.gif" width="58px" height="70px">
+        </span>
+        <span id="coin2">
+            <img src="coin.gif" width="58px" height="70px">
+        </span>
+        <span id="coin3">
+            <img src="coin.gif" width="58px" height="70px">
+        </span>
+    </div>
+
+    <span id="cloud">
+        <img src="cloud.png" width="2495px" height="231px">
+    </span>
+
+    <div id="volume">
+        <img src= "volume.png" width="40px" height="40px">
+    </div>
+
+    <div id="mute">
+        <img src= "mute.png" width="40px" height="40px">
+    </div>
+    
+       <audio id="audio" src='music.mp3' width='40px' controls autoplay;>
+           배경음악을 재생할 수 없습니다.
+       </audio>
+    </div>
+
+
+    <script>
+        mute.onclick =function(){
+        mute.style.display = "none";
+        volume.style.display = "block";
+        audio.play();
+        }
+
+        volume.onclick =function(){
+        mute.style.display = "block";
+        volume.style.display = "none";
+        audio.pause();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+body {
+    margin: 0px;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+}
+
+#bg {
+    width: 1280px;
+    height: 580px;
+    position: absolute;
+    z-index: 1;
+}
+
+#baby {
+    position: absolute;
+    top:54%; left:45%; margin-top:4px; margin-left:-40px;
+    z-index: 2;
+    animation: lift 1s;
+}
+
+
+#baby:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+#cloud {
+    position: absolute;
+    top:1%; right:-98%;
+    z-index: 2;
+    animation:MoveRight 60s linear infinite;
+    animation-direction: normal;
+    animation-delay: 0; 
+}
+
+@keyframes MoveRight {
+    100% {right:0%;}
+  }
+
+
+#arrowBounce {
+    position: absolute;
+    top: 50%; left: 50%; margin-top: 5px; margin-left: -14px;
+    animation: bounce 2s infinite;
+    animation-play-state: running;
+    z-index: 3;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+#monster {
+    position: absolute;
+    top: 50%; left: -15%; margin-top: -3px; margin-left: 0px;
+    z-index: 2;
+    animation: walk 3s linear 1;
+    animation-delay: 0; 
+    animation-fill-mode:both;
+    animation-play-state: paused;
+}
+
+#monster:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+@keyframes walk {
+    100% {left:30%;}
+  }
+
+#arrowBounce2 {
+    position: absolute;
+    top: 40%; left: 40%; margin-top: 5px; margin-left: -20px;
+    display: none;
+    animation: bounce 2s infinite;
+    animation-delay: 0;
+    animation-play-state: running;
+    z-index: 3;
+}
+
+/**#lift {
+    position: absolute;
+    top: 50%; left: 30%; margin-top: 5px; margin-left: -10px;
+    z-index: 2;
+    display: none;
+}
+
+#lift:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}**/
+
+#walkingwithbaby{
+    position: absolute;
+    top: 50%; left: 30%; margin-top: 5px; margin-left: -10px;
+    z-index: 2;
+    display: none;
+    animation: walkingwithbaby 4s linear 1;
+    animation-delay: 0; 
+    animation-fill-mode:both;
+}
+
+@keyframes  walkingwithbaby {
+    100% {left:100%;}
+  }
+
+/**#howtoplay{
+    position: absolute;
+    top: 15%; left: 25%; margin-top: 0px; margin-left: 20px;
+    z-index: 10;
+    display: none; 
+}
+
+@font-face {
+    font-family: "My Font";
+    src: url("./NEODGM.TTF");}
+
+#go {
+    font-family: "My Font";
+    text-align:center;
+    font-size: 3em;
+    font-weight: 600;
+    color: #ea0054;
+    transition: color 0.25s ease-in-out, transform 0.25s ease-in-out;
+    position: absolute;
+    top:70%; left:45%; margin-top:-20px; margin-left:20px;
+    z-index: 15;  
+    display: none; 
+}
+
+a:link {color: #ea0054; text-decoration: none;}
+a:visited {color:#ea0054; text-decoration: none;}
+a:hover {color: hsl(243, 80%, 62%); text-decoration: none;}
+
+#go:hover {
+    transform: scale(1.05);
+    color: hsl(243, 80%, 62%);
+    cursor: pointer;
+}
+    
+#go:active {
+    transform: scale(.9);
+}**/
+
+#music {
+    position: absolute;
+    display: none;
+    z-index: 11;
+    top: 30%;
+    left: 90%;
+}
+
+#volume {
+    position: absolute;
+    z-index: 10;
+    top: 5%; left: 95%;
+    display: none;
+}
+
+#volume:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+#mute {
+    position: absolute;
+    z-index: 10;
+    top: 5%; left: 94.5%; margin-left: -1px;
+}
+
+#mute:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+
+

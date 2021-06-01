@@ -1,0 +1,145 @@
+body {
+    margin: 0px;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+}
+
+#bg {
+    width: 1280px;
+    height: 580px;
+    position: absolute;
+    z-index: 1;
+}
+
+@font-face {
+    font-family: "My Font";
+    src: url("./NEODGM.TTF");}
+
+.title {
+    font-family: "My Font";
+    text-align:center;
+    font-size: 6em;
+    position: absolute;
+    top:50%; left:50%; margin-top:-130px; margin-left:-175px;
+    z-index: 3;   
+}
+
+#start {
+    font-family: "My Font";
+    font-size:3em;
+    font-weight: 800;
+    color: #ea0054;
+    position: absolute;
+    top:60%; left:60%; margin-top:-18px; margin-left:-170px;
+    transition: color 0.25s ease-in-out, transform 0.25s ease-in-out;
+    z-index: 3;
+}
+
+a:link {color: #ea0054; text-decoration: none;}
+a:visited {color:#ea0054; text-decoration: none;}
+a:hover {color: hsl(243, 80%, 62%); text-decoration: none;}
+
+#start:hover {
+    transform: scale(1.05);
+    color: hsl(243, 80%, 62%);
+    cursor: pointer;
+}
+    
+#start:active {
+    transform: scale(.9);
+}
+
+#mushroom {
+    position: absolute;
+    top:30%; left:30%; margin-top:3px; margin-left:-40px;
+    z-index: 3;
+    animation: jumpforms 0.5s linear infinite;
+    animation-direction: alternate;
+}
+
+@keyframes jumpforms {
+    100% {top:27%;}
+  }
+
+#gbox {
+    position: absolute;
+    top:29%; left:59%; margin-top:0px; margin-left:5px;
+    z-index: 3;
+}
+
+#coin {
+    position: absolute;
+    top:70%; left:80%; margin-top:-12px; margin-left:50px;
+    z-index: 3;
+}
+
+#coin2 {
+    position: absolute;
+    top:70%; left:80%; margin-top:-12px;; margin-left:-20px;
+    z-index: 3;
+}
+
+#coin3 {
+    position: absolute;
+    top:70%; left:80%; margin-top:-12px; margin-left:-90px;
+    z-index: 3;
+}
+
+#cloud {
+    position: absolute;
+    top:1%; right:-98%;
+    z-index: 2;
+    animation:MoveRight 60s linear infinite;
+    animation-direction: normal;
+    animation-delay: 0; 
+}
+
+@keyframes MoveRight {
+    100% {right:0%;}
+  }
+
+
+.conins {    top: 36%;
+    left: -123px;
+    z-index: 9999999999;
+    position: relative;
+    display: block;}
+
+
+#bg {width:100% !important; height:580px !important;}
+
+#bg img {width:100% !important; height:580px !important;}
+
+.conis { position: fixed; display: contents;}
+
+#music {
+    position: absolute;
+    display: none;
+    z-index: 11;
+    top: 30%;
+    left: 90%;
+}
+
+#volume {
+    position: absolute;
+    z-index: 10;
+    top: 5%; left: 95%;
+    display: none;
+}
+
+#volume:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+#mute {
+    position: absolute;
+    z-index: 10;
+    top: 5%; left: 94.5%; margin-left: -1px;
+}
+
+#mute:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}

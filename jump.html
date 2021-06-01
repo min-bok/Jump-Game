@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="jump.css" />
+
+    <title>Jump Game</title>
+
+  </head>
+  <body>
+    <div id="game">
+      <div id="jumpNum" class="hidden">성공 × <span>0</span></div>
+      <div id="gameover" class="hidden">GAME OVER</div>
+      <div id="btn">GO</div>
+      <div id="replay">REPLAY</div>
+      <div id="character"></div>
+      <div id="bomb"></div>
+      <div id="howtoplay">
+        <img src="howtoplay.png" width="580px">
+     </div>
+     <span id="cloud">
+      <img src="cloud.png" width="2495px" height="231px">
+     </span>
+    </div>
+   <script src="jump2.js"></script>
+
+    <!--<script>
+       btn.onclick = function(){
+        howtoplay.remove();
+        btn.remove();
+        character.style.display = "block";
+        bomb.style.display = "block"
+        bomb.classList.add("move");
+        jumpNum.classList.remove("hidden");
+        jumpNumCnt.textContent = 0;
+       }
+
+       game.onclick = function(){
+        character.classList.add("jump");
+        stopflag = true;
+        jumpNumCnt.textContent++;
+       }-->
+
+
+    </script>
+  </body>
+</html>
