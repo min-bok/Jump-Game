@@ -10,7 +10,6 @@
   
 #game {
     position: relative;
-    z-index: 1;
     background-color: #93d6e5;
     background-repeat: repeat;
     width: 1920px;
@@ -19,7 +18,6 @@
 
 #ground {
     position: absolute;
-    z-index: 2;
     background-image: url("ground.png");
     background-repeat: repeat-x;
     width: 1920px;
@@ -31,33 +29,22 @@
 
 /**Desktop 1920x1080**/
 @media (max-width: 1921px) {
-    #ground {position: absolute;
-             z-index: 2;
-             top:90%; left:0%; margin-top: 16px; margin-left: 0px;}
+    #ground {top:90%; left:0%; margin-top: 16px; margin-left: 0px;}
 }
 
 /**Notebook 1280x580**/
 @media (max-width: 1281px) {
-    #ground {position: absolute;
-             z-index: 2;
-             top:45%; left:0%; margin-top: 1px; margin-left: 0px;
-    }
+    #ground {top:45%; left:0%; margin-top: 1px; margin-left: 0px;}
 }
 
 /**Ipad 768x1024**/
 @media (max-width: 769px) {
-    #ground {position: absolute;
-             z-index: 2;
-             top:86%; left:0%; margin-top: 4px; margin-left: 0px;
-    }
+    #ground {top:86%; left:0%; margin-top: 4px; margin-left: 0px;}
 }
 
 /**IphoneX 375x812**/
 @media (max-width: 376px) {
-    #ground {position: absolute;
-             z-index: 2;
-             top:66%; left:0%; margin-top: 9px; margin-left: 0px;
-    }
+    #ground {top:66%; left:0%; margin-top: 9px; margin-left: 0px;}
 }
 
 .hidden {
