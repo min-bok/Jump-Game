@@ -10,9 +10,41 @@
   
 #game {
     position: relative;
-    background-image: url("bgforA.png");
+    background-color: #93d6e5;
+    background-repeat: repeat;
     width: 1920px;
     height: 1080px;
+}
+
+#ground {
+    position: absolute;
+    background-image: url("ground.png");
+    background-repeat: repeat-x;
+    width: 1920px;
+    height: 92px;
+    top:45%; left:0%; margin-top: 1px; margin-left: 0px;
+}
+
+/**Notebook first**/
+
+/**Desktop 1920x1080**/
+@media (max-width: 1921px) {
+    #ground {top:90%; left:0%; margin-top: 16px; margin-left: 0px;}
+}
+
+/**Notebook 1280x580**/
+@media (max-width: 1281px) {
+    #ground {top:45%; left:0%; margin-top: 1px; margin-left: 0px;}
+}
+
+/**Ipad 768x1024**/
+@media (max-width: 769px) {
+    #ground {top:86%; left:0%; margin-top: 4px; margin-left: 0px;}
+}
+
+/**IphoneX 375x812**/
+@media (max-width: 376px) {
+    #ground {top:66%; left:0%; margin-top: 9px; margin-left: 0px;}
 }
 
 .hidden {
@@ -35,6 +67,21 @@
     100% {right:40%;}
 }
 
+/**Notebook first**/
+
+/**Desktop 1920x1080**/
+@media (min-width: 1919px) {
+    #cloud {transform: scale(1.7);
+        top:10%; right:0%; margin-top: 16px; margin-right: 0px;
+        animation:DesktopMoveRight 60s linear infinite;
+        animation-direction: normal;
+        animation-delay: 0;}
+}
+
+@keyframes DesktopMoveRight {
+    100% {right:40%;}
+}
+
 #title {
     position: absolute;
     z-index: 4;
@@ -42,6 +89,34 @@
     font-family: "My Font";
     text-align:center;
     font-size: 6em;  
+}
+
+/**Notebook first**/
+
+/**Desktop 1920x1080**/
+@media (max-width: 1921px) {
+    #title {font-size: 10em; 
+            top:30%; left:34%; margin-top: -10px; margin-left: 0px;
+        }
+}
+
+/**Notebook 1280x580**/
+@media (max-width: 1281px) {
+    #title {font-size: 6em; 
+            top:14%; left:25%; margin-top: 0px; margin-left: -30px;
+        }
+}
+
+/**Ipad 768x1024**/
+@media (max-width: 769px) {
+    #title {font-size: 6em; 
+            top:32%; left:11%; margin-top: 0px; margin-left: 0px;
+        }
+}
+
+/**IphoneX 375x812**/
+@media (max-width: 376px) {
+    #title {top:14%; left:25%; margin-top: 0px; margin-left: -30px;}
 }
 
 #startBtn {
