@@ -1,0 +1,365 @@
+* {
+    padding: 0;
+    margin: 0px;
+    overflow: hidden;
+  }
+  
+@font-face {
+    font-family: "My Font";
+    src: url("./NEODGM.TTF");}
+  
+#game {
+    position: relative;
+    background-image: url("bgforA.png");
+    width: 1920px;
+    height: 1080px;
+}
+
+.hidden {
+    display: none;
+}
+
+#cloud {
+    position: absolute;
+    z-index: 2;
+    background-image: url("cloud.png");
+    width: 2495px; 
+    height: 231px;
+    top:1%; right:0%;
+    animation:MoveRight 60s linear infinite;
+    animation-direction: normal;
+    animation-delay: 0; 
+}
+
+@keyframes MoveRight {
+    100% {right:40%;}
+}
+
+#title {
+    position: absolute;
+    z-index: 4;
+    top:14%; left:25%; margin-top: 0px; margin-left: -30px;
+    font-family: "My Font";
+    text-align:center;
+    font-size: 6em;  
+}
+
+#startBtn {
+    position: absolute;
+    z-index: 3;
+    top:31%; left:30%; margin-top:0px; margin-left:-3px;
+    transition: color 0.25s ease-in-out, transform 0.25s ease-in-out;
+    font-family: "My Font";
+    font-size:3em;
+    font-weight: 800;
+    color: #ea0054;
+}
+
+#startBtn:hover {
+    transform: scale(1.05);
+    color: hsl(243, 80%, 62%);
+    cursor: pointer;
+}
+    
+#startBtn:active {
+    transform: scale(.9);
+}
+
+#greenBox {
+    position: absolute;
+    z-index: 2;
+    background-image: url("greenbox.png");
+    width: 283px;
+    height: 106px;
+    top:17%; left:38%; margin-top:10px; margin-left:25px;
+}
+
+#brownBox {
+    position: absolute;
+    z-index: 2;
+    background-image: url("brownbox.png");
+    width: 283px;
+    height: 106px;
+    top:22%; left:13%; margin-top:0px; margin-left:-10px;
+}
+
+#mushroom {
+    position: absolute;
+    z-index: 2;
+    background-image: url("mushroom.png");
+    width: 83px;
+    height: 80px;
+    top: 16%; left: 18%; margin-top:2px; margin-left:-11px;
+    animation: jumpmushroom 1s linear infinite;
+    animation-direction: alternate;
+}
+
+@keyframes jumpmushroom {
+    0% {top: 16%}
+    50% {top: 15%}
+    100% {top: 16%}
+}
+
+#coins {
+      position: absolute;
+      z-index: 2;
+      background-image: url("coins.gif");
+      width: 343px;
+      height: 111px; 
+      top: 36%; left: 48%; margin-top: 2px; margin-left: 0px;
+      transform: scale(0.7);
+}
+
+#baby {
+    position: absolute;
+    z-index: 3;
+    background-image: url("baby.gif");
+    width: 454px;
+    height: 436px;
+    transform: scale(0.4);
+    top: 19%; left: 21%; margin-top: -4px; margin-left: 10px;
+}
+
+#baby:hover {
+    transform: scale(0.43);
+    cursor: pointer;
+}
+
+#arrowBounce {
+    position: absolute;
+    z-index: 3;
+    top:28%; left: 33%; margin-top: 10px; margin-left: -8px;
+    animation: bounce 2s infinite;
+    animation-play-state: running;
+}
+
+#arrowBounce2 {
+    position: absolute;
+    z-index: 3;
+    top:24%; left: 26%; margin-top: 0px; margin-left: 0px;
+    animation: bounce 2s infinite;
+    animation-play-state: running;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+#monster {
+    position: absolute;
+    z-index: 3;
+    background-image: url("walkingmonster.gif");
+    width: 504px;
+    height: 548px;
+    transform: scale(0.4);
+    top:12%; left: -17%; margin-top: 0px; margin-left: 0px;
+}
+
+.walk {
+    animation: walk 3s linear 1;
+    animation-fill-mode: both;
+}
+
+@keyframes walk {
+    0% {left:-17%;}
+    100% {left:13%;}
+}
+
+#monster:hover {
+    transform: scale(0.43);
+    cursor: pointer;
+}
+
+#walkingwithbaby {
+    position: absolute;
+    z-index: 3;
+    background-image: url("walkingwithbaby.gif");
+    width: 490px;
+    height: 495px;
+    transform: scale(0.42);
+    top:14%; left: 13%; margin-top: 0px; margin-left: -10px;
+}
+
+.walkingwithbaby {
+    animation: walkingwithbaby 4s linear 1;
+    animation-fill-mode: both;
+}
+
+@keyframes  walkingwithbaby {
+    0% {left:13%;}
+    100% {left:60%;}
+}
+
+#walkingwithbaby:hover {
+    transform: scale(0.43);
+    cursor: pointer;
+}
+
+#howtoplay {
+    position: absolute;
+    z-index: 3;
+    background-image: url("howtoplay.png");
+    width: 580px;
+    height: 395px;
+    top:8%; left: 18%; margin-top: -10px; margin-left: 7px;
+    font-weight: 700;
+} 
+
+#goBtn {
+    position: absolute;
+    z-index: 4;
+    top: 35%; left: 35%; margin-top: 5px; margin-left: 0px;
+    font-family: "My Font";
+    transform: translateX(-50%);
+    width: 100px;
+    height: 40px;
+    font-size: 2.5em;
+    color: #ea0054;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#goBtn:hover {
+    color: hsl(243, 80%, 62%);
+    cursor: pointer;
+}
+
+#jumpNum {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-family: "My Font";
+    font-size: 1.5em;
+    font-weight: bolder;
+    z-index: 3;
+}
+
+#character {
+    position: absolute;
+    z-index: 3;
+    background-image: url("walkingwithbaby.gif");
+    width: 490px;
+    height: 495px;
+    transform: scale(0.42);
+    top:14%; left: 10%; margin-top: 0px; margin-left: -10px;
+}
+
+.character {
+    animation: character 2s linear 1;
+    animation-fill-mode: both;
+}
+
+@keyframes character {
+    0% {left:-17%;}
+    100% {left:8%;}
+}
+
+#pauseCharacter {
+    position: absolute;
+    z-index: 3;
+    background-image: url("pausecharacter.png");
+    width: 480px;
+    height: 490px;
+    transform: scale(0.41);
+    top:150px; left: 8%; margin-top: 0px; margin-left: -2px;
+}
+
+.jump {
+    animation: jump 1s ease;
+}
+  
+  @keyframes jump {
+    0% {top:150px;}
+    50% {top: 20px;}
+    70% {top: 20px;}
+    100% {top: 150px;}
+}
+
+.jumpSound {
+    position: absolute;
+    z-index: 3;   
+}
+
+#bomb {
+    position: absolute;
+    z-index: 2;
+    background-image: url("bomb.gif");
+    width: 361px;
+    height: 313px;
+    transform: scale(0.45);
+    top:25%; left: 40%; margin-top: 0px; margin-left: 0px;
+}
+
+ .bomb {
+    animation: bomb 2.5s linear infinite;
+}
+
+  @keyframes bomb {
+    0% {left: 53%}
+    100% {left: -10%;}
+}
+
+#gameover {
+    position: absolute;
+    top:21%; left:26%; margin-top: 0px; margin-left: 5px;
+    font-family: "My Font";
+    font-size: 4em;  
+    font-weight: bolder;
+    animation: twinkle 0.5s linear 2;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+#replayBtn {
+    position: absolute;
+    z-index: 4;
+    top: 27%; left: 33%; margin-top: -7px; margin-left: 10px;
+    font-family: "My Font";
+    transform: translateX(-50%);
+    width: 120px;
+    height: 40px;
+    font-size: 2.5em;
+    color: #ea0054;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#replayBtn:hover {
+    color: hsl(243, 80%, 62%);
+    cursor: pointer;
+}
+
+#nextStageBtn {
+    position: absolute;
+    z-index: 4;
+    top: 20%; left: 33%; margin-top: 0px; margin-left: 10px;
+    font-family: "My Font";
+    transform: translateX(-50%);
+    font-size: 4em;
+    font-weight: bolder;
+    cursor: pointer;
+    text-align:center;
+}
+
+#nextStageBtn:hover {
+    color: hsl(243, 80%, 62%);
+    cursor: pointer;
+}
