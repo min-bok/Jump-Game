@@ -1,50 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UNTIL GAMEOVER</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
-    <span id="bg">
-        <img src="bg.png" width="1280px" height="580px">
-    </span>
-    <div>
-    <span class="title">
-        UNTIL<br>
-        GAMEOVER
-    </span>
-    <span id="start"> 
-        <a href="A.html">START</a>
-    </span>
-</div>
-    <span id="mushroom">
-        <img src="ms.png" width="83px" height="80px">
-    </span>
-    <span id="gbox">
-        <img src="gbox.png" width="283px" height="106px">
-    </span>
-
-    <div class="coins">
-        <span id="coin">
-            <img src="coin.gif" width="58px" height="70px">
-        </span>
-        <span id="coin2">
-            <img src="coin.gif" width="58px" height="70px">
-        </span>
-        <span id="coin3">
-            <img src="coin.gif" width="58px" height="70px">
-        </span>
+   <div id="game">
+    <div id="cloud"></div>
+    <div id="title">UNTIL<br>GAMEOVER</div>
+    <div id="startBtn">START</div>
+    <div id="greenBox"></div>
+    <div id="brownBox"></div>
+    <div id="mushroom"></div>
+    <div id="coins"></div>
+    <div id="baby"></div>
+    <div id="arrowBounce">
+        <svg version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 83 80" overflow="visible" width="30px"><g fill="#EA0054">
+            <path d="M19.89 35.78h8.44v8.44h-8.44zM3 35.78h8.44v8.44H3zM11.44 35.78h8.45v8.44h-8.45zM53.67 52.67h8.44v8.44h-8.44zM62.11 44.22h8.45v8.45h-8.45zM53.67 44.22h8.44v8.45h-8.44zM70.56 35.78H79v8.44h-8.44zM53.67 35.78h8.44v8.44h-8.44zM62.11 35.78h8.45v8.44h-8.45zM19.89 52.67h8.44v8.44h-8.44zM19.89 44.22h8.44v8.45h-8.44zM11.44 44.22h8.45v8.45h-8.45zM45.22 61.11h8.45v8.45h-8.45zM28.33 18.89h8.45v8.44h-8.45zM36.78 52.67h8.44v8.44h-8.44zM36.78 10.44h8.44v8.45h-8.44zM28.33 44.22h8.45v8.45h-8.45zM28.33 27.33h8.45v8.45h-8.45zM28.33 2h8.45v8.44h-8.45zM45.22 10.44h8.45v8.45h-8.45zM36.78 27.33h8.44v8.45h-8.44zM36.78 18.89h8.44v8.44h-8.44zM28.33 61.11h8.45v8.45h-8.45zM28.33 52.67h8.45v8.44h-8.45zM45.22 35.78h8.45v8.44h-8.45zM45.22 52.67h8.45v8.44h-8.45zM36.78 2h8.44v8.44h-8.44zM45.22 27.33h8.45v8.45h-8.45zM45.22 2h8.45v8.44h-8.45zM28.33 10.44h8.45v8.45h-8.45zM28.33 35.78h8.45v8.44h-8.45zM36.78 44.22h8.44v8.45h-8.44zM45.22 44.22h8.45v8.45h-8.45zM45.22 18.89h8.45v8.44h-8.45zM36.78 69.56h8.44V78h-8.44zM36.78 61.11h8.44v8.45h-8.44zM36.78 35.78h8.44v8.44h-8.44z"/></g></svg></div>
+    <div id="arrowBounce2">
+        <svg version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 83 80" overflow="visible" width="30px"><g fill="#EA0054">
+            <path d="M19.89 35.78h8.44v8.44h-8.44zM3 35.78h8.44v8.44H3zM11.44 35.78h8.45v8.44h-8.45zM53.67 52.67h8.44v8.44h-8.44zM62.11 44.22h8.45v8.45h-8.45zM53.67 44.22h8.44v8.45h-8.44zM70.56 35.78H79v8.44h-8.44zM53.67 35.78h8.44v8.44h-8.44zM62.11 35.78h8.45v8.44h-8.45zM19.89 52.67h8.44v8.44h-8.44zM19.89 44.22h8.44v8.45h-8.44zM11.44 44.22h8.45v8.45h-8.45zM45.22 61.11h8.45v8.45h-8.45zM28.33 18.89h8.45v8.44h-8.45zM36.78 52.67h8.44v8.44h-8.44zM36.78 10.44h8.44v8.45h-8.44zM28.33 44.22h8.45v8.45h-8.45zM28.33 27.33h8.45v8.45h-8.45zM28.33 2h8.45v8.44h-8.45zM45.22 10.44h8.45v8.45h-8.45zM36.78 27.33h8.44v8.45h-8.44zM36.78 18.89h8.44v8.44h-8.44zM28.33 61.11h8.45v8.45h-8.45zM28.33 52.67h8.45v8.44h-8.45zM45.22 35.78h8.45v8.44h-8.45zM45.22 52.67h8.45v8.44h-8.45zM36.78 2h8.44v8.44h-8.44zM45.22 27.33h8.45v8.45h-8.45zM45.22 2h8.45v8.44h-8.45zM28.33 10.44h8.45v8.45h-8.45zM28.33 35.78h8.45v8.44h-8.45zM36.78 44.22h8.44v8.45h-8.44zM45.22 44.22h8.45v8.45h-8.45zM45.22 18.89h8.45v8.44h-8.45zM36.78 69.56h8.44V78h-8.44zM36.78 61.11h8.44v8.45h-8.44zM36.78 35.78h8.44v8.44h-8.44z"/></g></svg></div>
+    <div id="monster"></div>
+    <div id="walkingwithbaby"></div>
+    <div id="howtoplay"></div>
+    <div id="goBtn">GO</div>
+    <div id="jumpNum" class="hidden">성공 × <span id="cnt">0</span></div>
+    <div id="character"></div>
+    <div id="pauseCharacter"></div>
+    <div id="bomb"></div>
+    <div id="gameover">GAME OVER</div>
+    <div id="replayBtn">REPLAY</div>
+    <div id="nextStageBtn">NEXT STAGE<br>▶</div>
+    <div class="jumpSound"></div>
     </div>
 
-    <span id="cloud">
-        <img src="cloud.png" width="2495px" height="231px">
-    </span>
-
-    <div id="volume">
+  
+    <!-- <div id="volume">
         <img src= "volume.png" width="40px" height="40px">
     </div>
 
@@ -54,11 +49,10 @@
     
        <audio id="audio" src='music.mp3' width='40px' controls autoplay;>
            배경음악을 재생할 수 없습니다.
-       </audio>
-    </div>
+       </audio>-->
 
 
-    <script>
+    <!--<script>
         mute.onclick =function(){
         mute.style.display = "none";
         volume.style.display = "block";
@@ -70,6 +64,8 @@
         volume.style.display = "none";
         audio.pause();
         }
-    </script>
+    </script>-->
+
+    <script src="index.js"></script>
 </body>
 </html>
