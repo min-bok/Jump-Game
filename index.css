@@ -930,29 +930,129 @@
     position: absolute;
     z-index: 3;
     background-image: url("baby.gif");
+    background-repeat: no-repeat;
     width: 454px;
     height: 436px;
 }
 
-/**Notebook first**/
-
-/**Desktop 1920x1080**/
-@media (max-width: 1921px) {
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
     #baby {
-        transform: scale(0.8);
-        top: 52%; left: 38%; margin-top: 7px; margin-left: 0px;
+        transform: scale(1.0);
+        top: 58%; left: 40%; margin-top: 5px; margin-left: 0px;
+    }
+
+    #baby:hover {
+        transform: scale(1.03);
+        cursor: pointer;
     }
 }
 
-/**Notebook 1280x580**/
-@media (max-width: 1281px) {
+/**Desktop 1920x1080**/
+@media all and (max-width: 1921px){
     #baby {
-        transform: scale(0.4);
-        top: 19%; left: 21%; margin-top: -4px; margin-left: 10px;
-        }
+        transform: scale(0.75);
+        top: 54%; left: 40%; margin-top: -4px; margin-left: -3px;
+    }
+
+    #baby:hover {
+        transform: scale(0.78);
+        cursor: pointer;
+    }
 }
 
-/**Ipad 768x1024**/
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #baby {
+        transform: scale(0.6);
+        top: 41%; left: 36%; margin-top: -2px; margin-left: -10px;
+    }
+
+    #baby:hover {
+        transform: scale(0.63);
+        cursor: pointer;
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #baby {
+        transform: scale(0.4);
+        top: 35%; left: 31%; margin-top: -1px; margin-left: 0px;
+    }
+
+    #baby:hover {
+        transform: scale(0.43);
+        cursor: pointer;
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #baby {
+        transform: scale(0.4);
+        top: 41%; left: 30%; margin-top: 1px; margin-left: 0px;
+    }
+
+    #baby:hover {
+        transform: scale(0.43);
+        cursor: pointer;
+    }
+}
+
+/**Tablet 768X481**/
+@media all and (max-width: 769px){
+    #baby {
+        transform: scale(0.35);
+        top: 27%; left: 22%; margin-top: 1px; margin-left: 2px;
+    }
+
+    #baby:hover {
+        transform: scale(0.38);
+        cursor: pointer;
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #baby {
+        transform: scale(0.35);
+        top: 27%; left:-3%; margin-top: 0px; margin-left: -2px;
+    }
+
+    #baby:hover {
+        transform: scale(0.38);
+        cursor: pointer;
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #baby {
+        transform: scale(0.35);
+        top: 27%; left:-10%; margin-top: 0px; margin-left: -3px;
+    }
+
+    #baby:hover {
+        transform: scale(0.38);
+        cursor: pointer;
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #baby {
+        transform: scale(0.25);
+        top: 32%; left:-21%; margin-top: 2px; margin-left: 1px;
+    }
+
+    #baby:hover {
+        transform: scale(0.28);
+        cursor: pointer;
+    }
+}
+
+/**Ipad 768x1024
 @media (max-width: 769px) {
     #baby {
         transform: scale(0.5);
@@ -960,18 +1060,13 @@
         }
 }
 
-/**IphoneX 375x812**/
+/**IphoneX 375x812
 @media (max-width: 376px) {
     #baby {
         transform: scale(0.4);
         top: 37%; left: 0%; margin-top: 6px; margin-left: -32px;
         }
-}
-
-#baby:hover {
-    transform: scale(0.43);
-    cursor: pointer;
-}
+}**/
 
 #arrowBounce {
     position: absolute;
@@ -1040,23 +1135,215 @@
     background-image: url("walkingmonster.gif");
     width: 504px;
     height: 548px;
-    transform: scale(0.4);
-    top:12%; left: -17%; margin-top: 0px; margin-left: 0px;
+   /** top:12%; left: -17%; margin-top: 0px; margin-left: 0px;**/
 }
 
-.walk {
-    animation: walk 3s linear 1;
-    animation-fill-mode: both;
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #monster {
+        transform: scale(1.0);
+        top: 51%; left: 40%; margin-top: 3px; margin-left: 0px;
+    }
+
+    #monster:hover {
+        transform: scale(1.03);
+        cursor: pointer;
+    }
+
+    .walk {
+        animation: walk 3s linear 1;
+        animation-fill-mode: both;
+    }
+    
+    @keyframes walk {
+        0% {left:-17%;}
+        100% {left:27%;}
+    }
 }
 
-@keyframes walk {
-    0% {left:-17%;}
-    100% {left:13%;}
+
+/**Desktop 1920x1080**/
+@media all and (max-width: 1921px){
+    #monster {
+        transform: scale(0.75);
+        top: 45%; left: 40%; margin-top: 4px; margin-left: 0px;
+    }
+
+    #monster:hover {
+        transform: scale(0.78);
+        cursor: pointer;
+    }
+
+    .walk {
+        animation: walk 2.8s linear 1;
+        animation-fill-mode: both;
+    }
+    
+    @keyframes walk {
+        0% {left:-17%;}
+        100% {left:26%;}
+    }
 }
 
-#monster:hover {
-    transform: scale(0.43);
-    cursor: pointer;
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #monster {
+        transform: scale(0.6);
+        top: 29%; left: 40%; margin-top: 6px; margin-left: 0px;
+    }
+
+    #monster:hover {
+        transform: scale(0.63);
+        cursor: pointer;
+    }
+
+    .walk {
+        animation: walk 2.5s linear 1;
+        animation-fill-mode: both;
+    }
+    
+    @keyframes walk {
+        0% {left:-17%;}
+        100% {left:21%;}
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #monster {
+        transform: scale(0.4);
+        top: 22%; left: 40%; margin-top: 2px; margin-left: 0px;
+    }
+
+    #monster:hover {
+        transform: scale(0.43);
+        cursor: pointer;
+    }
+
+    .walk {
+        animation: walk 3s linear 1;
+        animation-fill-mode: both;
+    }
+    
+    @keyframes walk {
+        0% {left:-17%;}
+        100% {left:19%;}
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #monster {
+        transform: scale(0.4);
+        top: 29%; left: 40%; margin-top: 5px; margin-left: 0px;
+    }
+
+    #monster:hover {
+        transform: scale(0.43);
+        cursor: pointer;
+    }
+
+    .walk {
+        animation: walk 2.0s linear 1;
+        animation-fill-mode: both;
+    }
+    
+    @keyframes walk {
+        0% {left:-20%;}
+        100% {left:15%;}
+    }
+}
+
+/**Tablet 768X481**/
+@media all and (max-width: 769px){
+    #monster {
+        transform: scale(0.35);
+        top: 13%; left: 40%; margin-top: -2px; margin-left: 0px;
+    }
+
+    #monster:hover {
+        transform: scale(0.38);
+        cursor: pointer;
+    }
+
+    .walk {
+        animation: walk 2.4s linear 1;
+        animation-fill-mode: both;
+    }
+    
+    @keyframes walk {
+        0% {left:-40%;}
+        100% {left:3%;}
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #monster {
+        transform: scale(0.35);
+        top: 13%; left: -10%; margin-top: -2px; margin-left: 0px;
+    }
+
+    #monster:hover {
+        transform: scale(0.38);
+        cursor: pointer;
+    }
+
+    .walk {
+        animation: walk 1.8s linear 1;
+        animation-fill-mode: both;
+    }
+    
+    @keyframes walk {
+        0% {left:-80%;}
+        100% {left:-37%;}
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #monster {
+        transform: scale(0.35);
+        top: 13%; left: -10%; margin-top: -2px; margin-left: 0px;
+    }
+
+    #monster:hover {
+        transform: scale(0.38);
+        cursor: pointer;
+    }
+
+    .walk {
+        animation: walk 1.3s linear 1;
+        animation-fill-mode: both;
+    }
+    
+    @keyframes walk {
+        0% {left:-80%;}
+        100% {left:-49%;}
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #monster {
+        transform: scale(0.25);
+        top: 19%; left: -10%; margin-top: 0px; margin-left: 0px;
+    }
+
+    #monster:hover {
+        transform: scale(0.28);
+        cursor: pointer;
+    }
+
+    .walk {
+        animation: walk 0.9s linear 1;
+        animation-fill-mode: both;
+    }
+    
+    @keyframes walk {
+        0% {left:-80%;}
+        100% {left:-56%;}
+    }
 }
 
 #walkingwithbaby {
