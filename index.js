@@ -485,7 +485,7 @@ if(window.matchMedia("(min-width: 377px) and (max-width: 426px)").matches == tru
        setTimeout(() => {
          pauseCharacter.classList.remove("jump");
          stopflag = false;
-         }, 1000);
+         }100, 1000);
        });
     
     // 0.1초마다 캐릭터와 폭탄이 닿았는지 확인
