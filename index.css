@@ -1,0 +1,7397 @@
+* {
+    padding: 0;
+    margin: 0px;
+    overflow: hidden;
+  }
+  
+@font-face {
+    font-family: "My Font";
+    src: url("./NEODGM.TTF");}
+  
+#game {
+    position: relative;
+    background-color: #93d6e5;
+    background-repeat: repeat;
+}
+
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #game {
+        width: 2690px;
+        height: 1376px;
+    }
+}
+
+/**Desktop 1920x1080**/
+@media all and (max-width: 1921px){
+    #game {
+        width: 1920px;
+        height: 1080px;
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #game {
+        width: 1440px;
+        height: 740px;
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #game {
+        width: 1280px;
+        height: 580px;
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #game {
+        width: 1024px;
+        height: 642px;
+    }
+}
+
+/**Tablet 768X481**/
+@media all and (max-width: 769px){
+    #game {
+        width: 768px;
+        height: 481px;
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #game {
+        width: 425px;
+        height: 481px;
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #game {
+        width: 375px;
+        height: 481px;
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #game {
+        width: 320px;
+        height: 481px;
+    }
+}
+
+#ground {
+    position: absolute;
+    background-image: url("ground.png");
+    background-repeat: repeat-x;
+    width: 1920px;
+    height: 92px;
+    transform: scale(1.0);
+    top: 45%; left: 0%; margin-top: 1px; margin-left: 0px;
+}
+
+/**4K 2690X1376**/
+@media all and /**(min-width:1921px) and**/ (max-width: 2691px) {
+    #ground {
+        transform: scale(2.0);
+        top: 90%; left: 0%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**Desktop 1920x1080**/
+@media all and (max-width: 1921px){
+    #ground {
+        transform: scale(1.7);
+        top: 87%; left: 0%; margin-top: 17px; margin-left: 0px;
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #ground {
+        transform: scale(1.3);
+        top: 85%; left: 0%; margin-top: 6px; margin-left: 0px;
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #ground {
+        transform: scale(1.0);
+        top: 83%; left: 0%; margin-top: 7px; margin-left: 0px;
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #ground {
+        transform: scale(1.0);
+        top: 85%; left: 0%; margin-top: 5px; margin-left: 0px;
+    }
+}
+
+/**Tablet 가로 768X481**/
+@media all and (max-width: 769px){
+    #ground {
+        transform: scale(0.8);
+        top: 82%; left: -25%; margin-top: 5px; margin-left: 0px;
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #ground {
+        transform: scale(0.8);
+        top: 81%; left: -46%; margin-top: 9px; margin-left: 0px;
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #ground {
+        transform: scale(0.8);
+        top: 82%; left: -55%; margin-top: 4px; margin-left: 0px;
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #ground {
+        transform: scale(0.7);
+        top: 83%; left: -95%; margin-top: 4px; margin-left: 0px;
+    }
+}
+
+/**Ipad 768x1024
+@media all and (max-width: 769px) {
+    #ground {
+        transform: scale(1.7);
+        top: 83%; left: 0%; margin-top: 2px; margin-left: 0px;
+    }
+}**/
+
+/**IphoneX 375x812
+@media (max-width: 376px) and (max-height: 813px) {
+    #ground {
+        transform: scale(1.3);
+        top: 65%; left: 0%; margin-top: 4px; margin-left: 0px;
+    }
+}**/
+
+.hidden {
+    display: none;
+}
+
+#cloud {
+    position: absolute;
+    z-index: 2;
+    background-image: url("cloud.png");
+    width: 2495px; 
+    height: 231px;
+}
+
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #cloud {
+        transform: scale(2.0);
+        top: 10%; right: 0%; margin-top: 16px; margin-right: 0px;
+        animation:MoveRight 60s linear infinite;
+        animation-direction: normal;
+        animation-delay: 0;
+        }
+}
+
+/**Desktop 1920x1080**/
+@media only screen and (max-width: 1921px) {
+    #cloud {
+        transform: scale(1.7);
+        top: 10%; right: 0%; margin-top: 16px; margin-right: 0px;
+        animation:MoveRight 60s linear infinite;
+        animation-direction: normal;
+        animation-delay: 0;
+        }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #cloud {
+        transform: scale(1.3);
+        top: 5%; right: 0%; margin-top: 0px; margin-right: 0px;
+        animation:MoveRight 60s linear infinite;
+        animation-direction: normal;
+        animation-delay: 0;
+        }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #cloud {
+        transform: scale(1.0);
+        top: 3%; right: 0%; margin-top: 0px; margin-right: 0px;
+        animation:MoveRight 60s linear infinite;
+        animation-direction: normal;
+        animation-delay: 0;
+        }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #cloud {
+        transform: scale(1.0);
+        top: 3%; right: 0%; margin-top: 0px; margin-right: 0px;
+        animation:MoveRight 60s linear infinite;
+        animation-direction: normal;
+        animation-delay: 0;
+        }
+}
+
+/**Tablet 가로 768X481**/
+@media all and (max-width: 769px){
+    #cloud {
+        transform: scale(0.8);
+        top: 3%; right: -100%; margin-top: 0px; margin-right: 0px;
+        animation:MoveRight 110s linear infinite;
+        animation-direction: normal;
+        animation-delay: 0;
+        }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #cloud {
+        transform: scale(0.8);
+        top: 3%; right: -100%; margin-top: 0px; margin-right: 0px;
+        animation:MoveRight 110s linear infinite;
+        animation-direction: normal;
+        animation-delay: 0;
+        }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #cloud {
+        transform: scale(0.8);
+        top: 3%; right: -100%; margin-top: 0px; margin-right: 0px;
+        animation:MoveRight 110s linear infinite;
+        animation-direction: normal;
+        animation-delay: 0;
+        }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #cloud {
+        transform: scale(0.8);
+        top: 3%; right: -220%; margin-top: 0px; margin-right: 0px;
+        animation:MoveRight 110s linear infinite;
+        animation-direction: normal;
+        animation-delay: 0;
+        }
+}
+
+/**Ipad 768x1024
+@media (max-width: 769px) {
+    #cloud {
+        transform: scale(1.5);
+        top: 10%; right: 0%; margin-top: 0px; margin-right: 0px;
+        animation:MoveRight 60s linear infinite;
+        animation-direction: normal;
+        animation-delay: 0;
+        }
+}**/
+
+/**IphoneX 375x812
+@media (max-width: 376px) and (max-height: 813px) {
+    #cloud {
+        transform: scale(1.4);
+        top: 7%; right: 0%; margin-top: 0px; margin-right: 0px;
+        animation:MoveRight 60s linear infinite;
+        animation-direction: normal;
+        animation-delay: 0;
+        }
+}**/
+
+@keyframes MoveRight {
+    100% {right:40%;}
+}
+
+#title {
+    position: absolute;
+    z-index: 4;
+    font-family: "My Font";
+    text-align:center;
+}
+
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #title {
+        font-size: 12em;
+        font-weight: 500; 
+        top: 30%; left: 34%; margin-top: -10px; margin-left: 10px;
+        }
+}
+
+/**Desktop 1920x1080**/
+@media (max-width: 1921px) {
+    #title {
+        font-size: 10em;
+        font-weight: 500; 
+        top: 30%; left: 34%; margin-top: -10px; margin-left: 0px;
+        }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #title {
+        font-size: 7.5em;
+        font-weight: 500; 
+        top: 30%; left: 34%; margin-top: -10px; margin-left: 0px;
+        }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #title {
+        font-size: 6em;
+        font-weight: 500; 
+        top: 28%; left: 35%; margin-top: 0px; margin-left: 0px;
+        }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #title {
+        font-size: 6em;
+        font-weight: 500; 
+        top: 28%; left: 34%; margin-top: 0px; margin-left: 0px;
+        }
+}
+
+/**Tablet 가로 768X481**/
+@media all and (max-width: 769px){
+    #title {
+        font-size: 5em;
+        font-weight: 500; 
+        top: 28%; left: 30%; margin-top: 0px; margin-left: 0px;
+        }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #title {
+        font-size: 4em;
+        font-weight: 500; 
+        top: 32%; left: 22%; margin-top: 0px; margin-left: 0px;
+        }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #title {
+        font-size: 3.5em;
+        font-weight: 500; 
+        top: 32%; left: 22%; margin-top: 0px; margin-left: 0px;
+        }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #title {
+        font-size: 3em;
+        font-weight: 500; 
+        top: 34%; left: 20%; margin-top: 0px; margin-left: 3px;
+        }
+}
+
+/**Ipad 768x1024
+@media (max-width: 769px) {
+    #title {
+        font-size: 6em; 
+        font-weight: 500;
+        top: 32%; left: 11%; margin-top: 0px; margin-left: 0px;
+        }
+}**/
+
+/**IphoneX 375x812
+@media (max-width: 376px) and (max-height: 813px) {
+    #title {
+        font-size: 4em;
+        font-weight: 500; 
+        top: 25%; left: 3%; margin-top: 0px; margin-left: 15px;
+    }
+}**/
+
+#startBtn {
+    position: absolute;
+    z-index: 3;
+    transition: color 0.25s ease-in-out, transform 0.25s ease-in-out;
+    font-family: "My Font";
+    color: #ea0054;
+}
+
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #startBtn {
+        font-size:7.5em;
+        font-weight: 800;
+        top: 56%; left: 42%; margin-top: 0px; margin-left: 21px;
+    }
+}
+
+/**Desktop 1920x1080**/
+@media (max-width: 1921px) {
+    #startBtn {
+        font-size:5.5em;
+        font-weight: 800;
+        top: 57%; left: 45%; margin-top: 0px; margin-left: -10px;
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #startBtn {
+        font-size:4.2em;
+        font-weight: 800;
+        top: 59%; left: 45%; margin-top: 0px; margin-left: -8px;
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #startBtn {
+        font-size:3.5em;
+        font-weight: 800;
+        top: 59%; left: 44%; margin-top: 0px; margin-left: -6px;
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #startBtn {
+        font-size:3.5em;
+        font-weight: 800;
+        top: 57%; left: 46%; margin-top: -5px; margin-left: -5px;
+    }
+}
+
+/**Tablet 가로 768X481**/
+@media all and (max-width: 769px){
+    #startBtn {
+        font-size:2.8em;
+        font-weight: 800;
+        top: 59%; left: 42%; margin-top: 0px; margin-left: 3.5px;
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #startBtn {
+        font-size:2.3em;
+        font-weight: 800;
+        top: 57%; left: 38%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #startBtn {
+        font-size:2.3em;
+        font-weight: 800;
+        top: 54%; left: 37%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #startBtn {
+        font-size:2em;
+        font-weight: 800;
+        top: 53%; left: 36%; margin-top: 0px; margin-left: 3px;
+    }
+}
+
+/**Ipad 768x1024
+@media (max-width: 769px) {
+    #startBtn {
+        font-size:3.8em;
+        font-weight: 800;
+        top: 49%; left: 16%; margin-top: 0px; margin-left: 9px;
+    }
+}**/
+
+/**IphoneX 375x812
+@media (max-width: 376px) and (max-height: 813px) {
+    #startBtn {
+        font-size:3em;
+        font-weight: 800;
+        top: 36%; left: 7%; margin-top: 5px; margin-left: 1px;}
+}**/
+
+#startBtn:hover {
+    transform: scale(1.05);
+    color: hsl(243, 80%, 62%);
+    cursor: pointer;
+}
+    
+#startBtn:active {
+    transform: scale(0.9);
+}
+
+#greenBox {
+    position: absolute;
+    z-index: 2;
+    background-image: url("greenbox.png");
+    width: 283px;
+    height: 106px;
+}
+
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #greenBox {
+        transform: scale(2.0);
+        top: 41%; left: 63%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**Desktop 1920x1080**/
+@media (max-width: 1921px) {
+    #greenBox {
+        transform: scale(1.7);
+        top:39%; left:67%; margin-top:0px; margin-left:0px;
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #greenBox {
+        transform: scale(1.3);
+        top:40%; left:66%; margin-top:0px; margin-left:0px;
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #greenBox {
+        transform: scale(1.0);
+        top:38%; left:61%; margin-top:0px; margin-left:0px;
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #greenBox {
+        transform: scale(1.0);
+        top:37%; left:67%; margin-top:0px; margin-left:-3px;
+    }
+}
+
+/**Tablet 가로 768X481**/
+@media all and (max-width: 769px){
+    #greenBox {
+        transform: scale(0.8);
+        top:37%; left:62%; margin-top:-3px; margin-left:6px;
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #greenBox {
+        transform: scale(0.5);
+        top:35%; left:52%; margin-top:0px; margin-left:0px;
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #greenBox {
+        transform: scale(0.4);
+        top:34%; left:49%; margin-top:0px; margin-left:2px;
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #greenBox {
+        transform: scale(0.3);
+        top:33%; left:41%; margin-top:1px; margin-left:0px;
+    }
+}
+
+/**Ipad 768x1024
+@media (max-width: 769px) {
+    #greenBox {
+        transform: scale(1.0);
+        top: 37%; left: 26%; margin-top: 0px; margin-left: 0px;
+        }
+}**/
+
+/**IphoneX 375x812
+@media (max-width: 376px) and (max-height: 813px) {
+    #greenBox {
+        display: none;
+        }
+}**/
+
+#brownBox {
+    position: absolute;
+    z-index: 2;
+    background-image: url("brownbox.png");
+    width: 283px;
+    height: 106px;
+}
+
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #brownBox {
+        transform: scale(2.0);
+        top: 46%; left: 24%; margin-top: -6px; margin-left: -10px;
+    }
+}
+
+/**Desktop 1920x1080**/
+@media (max-width: 1921px) {
+    #brownBox {
+        transform: scale(1.7);
+        top:46%; left:21%; margin-top:-6px; margin-left:0px;
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #brownBox {
+        transform: scale(1.3);
+        top:46%; left:17%; margin-top:-8px; margin-left:0px;
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #brownBox {
+        transform: scale(1.0);
+        top:43%; left:18%; margin-top:-2px; margin-left:0px;
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #brownBox {
+        transform: scale(1.0);
+        top:42%; left:13%; margin-top:-3px; margin-left:0px;
+    }
+}
+
+/**Tablet 가로 768X481**/
+@media all and (max-width: 769px){
+    #brownBox {
+        transform: scale(0.8);
+        top:41%; left:4%; margin-top:0px; margin-left:2px;
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #brownBox {
+        transform: scale(0.5);
+        top:40%; left:-17%; margin-top:0px; margin-left:0px;
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #brownBox {
+        transform: scale(0.4);
+        top:40%; left:-23%; margin-top:0px; margin-left:0px;
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #brownBox {
+        transform: scale(0.3);
+        top:40%; left:-29%; margin-top:0px; margin-left:0px;
+    }
+}
+
+/**Ipad 768x1024
+@media (max-width: 769px) {
+    #brownBox {
+        transform: scale(1.0);
+        top:40%; left:1%; margin-top:-1px; margin-left:-13px;
+        }
+}**/
+
+/**IphoneX 375x812
+@media (max-width: 376px) and (max-height: 813px) {
+    #brownBox {
+        display: none;
+        }
+}**/
+
+#mushroom {
+    position: absolute;
+    z-index: 2;
+    background-image: url("mushroom.png");
+    width: 83px;
+    height: 80px;
+    animation: jumpmushroom 1s linear infinite;
+    animation-direction: alternate;
+}
+
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #mushroom {
+        transform: scale(2.0);
+        top: 16%; left: 27%; margin-top: 270px; margin-left: -1px;
+    }
+}
+
+/**Desktop 1920x1080**/
+@media (max-width: 1921px) {
+    #mushroom {
+        transform: scale(1.7);
+        top: 16%; left: 26%; margin-top: 203px; margin-left: -4px;
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #mushroom {
+        transform: scale(1.3);
+        top: 16%; left: 23%; margin-top: 130px; margin-left: 0px;
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #mushroom {
+        transform: scale(1.0);
+        top: 16%; left: 25%; margin-top: 92px; margin-left: 6px;
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #mushroom {
+        transform: scale(1.0);
+        top: 16%; left: 22%; margin-top: 101px; margin-left: 3px;
+    }
+}
+
+/**Tablet 가로 768X481**/
+@media all and (max-width: 769px){
+    #mushroom {
+        transform: scale(0.8);
+        top: 16%; left: 16%; margin-top: 73px; margin-left: 6px;
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #mushroom {
+        transform: scale(0.5);
+        top: 16%; left: 6%; margin-top: 91px; margin-left: 0px;
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #mushroom {
+        transform: scale(0.4);
+        top: 16%; left: 3%; margin-top: 98px; margin-left: 0px;
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #mushroom {
+        transform: scale(0.3);
+        top: 16%; left: 2%; margin-top: 106px; margin-left: 0px;
+    }
+}
+
+/**Ipad 768x1024
+@media (max-width: 769px) {
+    #mushroom {
+        transform: scale(1.0);
+        top: 16%; left: 5%; margin-top: 196px; margin-left: 5px;
+        }
+}**/
+
+/**IphoneX 375x812
+@media (max-width: 376px) and (max-height: 813px) {
+    #mushroom {
+        display: none;
+        }
+}**/
+
+@keyframes jumpmushroom {
+    0% {top: 16%}
+    50% {top: 15%}
+    100% {top: 16%}
+}
+
+#coins {
+      position: absolute;
+      z-index: 2;
+      background-image: url("coins.gif");
+      width: 343px;
+      height: 111px; 
+}
+
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #coins {
+        transform: scale(1.6);
+        top: 76%; left: 74%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**Desktop 1920x1080**/
+@media (max-width: 1921px) {
+    #coins {
+        transform: scale(1.4);
+        top: 73%; left: 75%; margin-top: 10px; margin-left: 0px;
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #coins {
+        transform: scale(0.9);
+        top: 70%; left: 73%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**My Laptop 1280x580**/
+@media (max-width: 1281px) {
+    #coins {
+        transform: scale(0.7);
+        top: 67%; left: 72%; margin-top: 0px; margin-left: 0px;
+        }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #coins {
+        transform: scale(0.7);
+        top: 70%; left: 68%; margin-top: 0px; margin-left: 0px;
+        }
+}
+
+/**Tablet 가로 768X481**/
+@media all and (max-width: 769px){
+    #coins {
+        transform: scale(0.6);
+        top: 66%; left: 58%; margin-top: 0px; margin-left: 0px;
+        }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #coins {
+        transform: scale(0.45);
+        top: 67%; left: 36%; margin-top: 0px; margin-left: 0px;
+        }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #coins {
+        transform: scale(0.5);
+        top: 67%; left: 30%; margin-top: 0px; margin-left: 0px;
+        }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #coins {
+        transform: scale(0.35);
+        top: 70%; left: 25%; margin-top: 0px; margin-left: 0px;
+        }
+}
+
+/**Ipad 768x1024
+@media (max-width: 769px) {
+    #coins {
+        transform: scale(0.9);
+        top: 70%; left: 21%; margin-top: 0px; margin-left: 0px;
+        }
+}**/
+
+/**IphoneX 375x812
+@media (max-width: 376px) and (max-height: 813px) {
+    #coins {
+        transform: scale(0.7);
+        top: 55%; left: 4%; margin-top: 2px; margin-left: 0px;
+        }
+}**/
+
+#baby {
+    position: absolute;
+    z-index: 3;
+    background-image: url("baby.gif");
+    background-repeat: no-repeat;
+    width: 454px;
+    height: 436px;
+}
+
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #baby {
+        transform: scale(1.0);
+        top: 58%; left: 40%; margin-top: 5px; margin-left: 0px;
+    }
+
+    #baby:hover {
+        transform: scale(1.03);
+        cursor: pointer;
+    }
+}
+
+/**Desktop 1920x1080**/
+@media all and (max-width: 1921px){
+    #baby {
+        transform: scale(0.75);
+        top: 54%; left: 40%; margin-top: -4px; margin-left: -3px;
+    }
+
+    #baby:hover {
+        transform: scale(0.78);
+        cursor: pointer;
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #baby {
+        transform: scale(0.6);
+        top: 41%; left: 36%; margin-top: -2px; margin-left: -10px;
+    }
+
+    #baby:hover {
+        transform: scale(0.63);
+        cursor: pointer;
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #baby {
+        transform: scale(0.4);
+        top: 35%; left: 31%; margin-top: -1px; margin-left: 0px;
+    }
+
+    #baby:hover {
+        transform: scale(0.43);
+        cursor: pointer;
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #baby {
+        transform: scale(0.4);
+        top: 41%; left: 30%; margin-top: 1px; margin-left: 0px;
+    }
+
+    #baby:hover {
+        transform: scale(0.43);
+        cursor: pointer;
+    }
+}
+
+/**Tablet 768X481**/
+@media all and (max-width: 769px){
+    #baby {
+        transform: scale(0.35);
+        top: 27%; left: 22%; margin-top: 1px; margin-left: -5px;
+    }
+
+    #baby:hover {
+        transform: scale(0.38);
+        cursor: pointer;
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #baby {
+        transform: scale(0.35);
+        top: 27%; left:-3%; margin-top: 0px; margin-left: -2px;
+    }
+
+    #baby:hover {
+        transform: scale(0.38);
+        cursor: pointer;
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #baby {
+        transform: scale(0.35);
+        top: 27%; left:-10%; margin-top: 0px; margin-left: -3px;
+    }
+
+    #baby:hover {
+        transform: scale(0.38);
+        cursor: pointer;
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #baby {
+        transform: scale(0.25);
+        top: 32%; left:-21%; margin-top: 2px; margin-left: 1px;
+    }
+
+    #baby:hover {
+        transform: scale(0.28);
+        cursor: pointer;
+    }
+}
+
+/**Ipad 768x1024
+@media (max-width: 769px) {
+    #baby {
+        transform: scale(0.5);
+        top: 52%; left: 9%; margin-top: 2px; margin-left: -1px;
+        }
+}
+/**IphoneX 375x812
+@media (max-width: 376px) {
+    #baby {
+        transform: scale(0.4);
+        top: 37%; left: 0%; margin-top: 6px; margin-left: -32px;
+        }
+}**/
+
+#monster {
+    position: absolute;
+    z-index: 3;
+    background-image: url("walkingmonster.gif");
+    width: 504px;
+    height: 548px;
+}
+
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #monster {
+        transform: scale(1.0);
+        top: 51%; left: 40%; margin-top: 3px; margin-left: 0px;
+    }
+
+    #monster:hover {
+        transform: scale(1.03);
+        cursor: pointer;
+    }
+
+    .walk {
+        animation: walk 3s linear 1;
+        animation-fill-mode: both;
+    }
+    
+    @keyframes walk {
+        0% {left:-17%;}
+        100% {left:27%;}
+    }
+}
+
+
+/**Desktop 1920x1080**/
+@media all and (max-width: 1921px){
+    #monster {
+        transform: scale(0.75);
+        top: 45%; left: 40%; margin-top: 4px; margin-left: 0px;
+    }
+
+    #monster:hover {
+        transform: scale(0.78);
+        cursor: pointer;
+    }
+
+    .walk {
+        animation: walk 2.8s linear 1;
+        animation-fill-mode: both;
+    }
+    
+    @keyframes walk {
+        0% {left:-17%;}
+        100% {left:26%;}
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #monster {
+        transform: scale(0.6);
+        top: 29%; left: 40%; margin-top: 6px; margin-left: 0px;
+    }
+
+    #monster:hover {
+        transform: scale(0.63);
+        cursor: pointer;
+    }
+
+    .walk {
+        animation: walk 2.5s linear 1;
+        animation-fill-mode: both;
+    }
+    
+    @keyframes walk {
+        0% {left:-17%;}
+        100% {left:21%;}
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #monster {
+        transform: scale(0.4);
+        top: 22%; left: 40%; margin-top: 2px; margin-left: 0px;
+    }
+
+    #monster:hover {
+        transform: scale(0.43);
+        cursor: pointer;
+    }
+
+    .walk {
+        animation: walk 3s linear 1;
+        animation-fill-mode: both;
+    }
+    
+    @keyframes walk {
+        0% {left:-17%;}
+        100% {left:19%;}
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #monster {
+        transform: scale(0.4);
+        top: 29%; left: 40%; margin-top: 5px; margin-left: 0px;
+    }
+
+    #monster:hover {
+        transform: scale(0.43);
+        cursor: pointer;
+    }
+
+    .walk {
+        animation: walk 2.0s linear 1;
+        animation-fill-mode: both;
+    }
+    
+    @keyframes walk {
+        0% {left:-20%;}
+        100% {left:15%;}
+    }
+}
+
+/**Tablet 768X481**/
+@media all and (max-width: 769px){
+    #monster {
+        transform: scale(0.35);
+        top: 13%; left: 40%; margin-top: -2px; margin-left: 0px;
+    }
+
+    #monster:hover {
+        transform: scale(0.38);
+        cursor: pointer;
+    }
+
+    .walk {
+        animation: walk 2.4s linear 1;
+        animation-fill-mode: both;
+    }
+    
+    @keyframes walk {
+        0% {left:-40%;}
+        100% {left:3%;}
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #monster {
+        transform: scale(0.35);
+        top: 13%; left: -10%; margin-top: -2px; margin-left: 0px;
+    }
+
+    #monster:hover {
+        transform: scale(0.38);
+        cursor: pointer;
+    }
+
+    .walk {
+        animation: walk 1.8s linear 1;
+        animation-fill-mode: both;
+    }
+    
+    @keyframes walk {
+        0% {left:-80%;}
+        100% {left:-37%;}
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #monster {
+        transform: scale(0.35);
+        top: 13%; left: -10%; margin-top: -2px; margin-left: 0px;
+    }
+
+    #monster:hover {
+        transform: scale(0.38);
+        cursor: pointer;
+    }
+
+    .walk {
+        animation: walk 1.3s linear 1;
+        animation-fill-mode: both;
+    }
+    
+    @keyframes walk {
+        0% {left:-80%;}
+        100% {left:-49%;}
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #monster {
+        transform: scale(0.25);
+        top: 19%; left: -10%; margin-top: 0px; margin-left: 0px;
+    }
+
+    #monster:hover {
+        transform: scale(0.28);
+        cursor: pointer;
+    }
+
+    .walk {
+        animation: walk 0.9s linear 1;
+        animation-fill-mode: both;
+    }
+    
+    @keyframes walk {
+        0% {left:-80%;}
+        100% {left:-56%;}
+    }
+}
+
+#arrowBounce {
+    position: absolute;
+    z-index: 3;
+    background-image: url("arrow.png");
+    background-size: cover;
+    width: 83px;
+    height: 80px;
+    animation: bounce 2s infinite;
+    animation-play-state: running;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #arrowBounce {
+        width: 83px;
+        height: 80px;
+        top: 54%; left: 47%; margin-top: 4px; margin-left: -1px;
+    }
+}
+
+/**Desktop 1920x1080**/
+@media all and (max-width: 1921px){
+    #arrowBounce {
+        width: 53px;
+        height: 50px;
+        top: 55%; left: 50%; margin-top: 4px; margin-left: 8px;
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #arrowBounce {
+        width: 43px;
+        height: 40px;
+        top: 50%; left: 50%; margin-top: 0px; margin-left: -4px;
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #arrowBounce {
+        width: 27px;
+        height: 27px;
+        top: 55%; left: 47%; margin-top: 0px; margin-left: 10px;
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #arrowBounce {
+        width: 28px;
+        height: 28px;
+        top: 59%; left: 51%; margin-top: 0px; margin-left: -1px;
+    }
+}
+
+/**Tablet 가로 768X481**/
+@media all and (max-width: 769px){
+    #arrowBounce {
+        width: 23px;
+        height: 23px;
+        top: 54%; left: 50%; margin-top: 2px; margin-left: -4px;
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #arrowBounce {
+        width: 23px;
+        height: 23px;
+        top: 54%; left: 47%; margin-top: 0px; margin-left: 2px;
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #arrowBounce {
+        width: 23px;
+        height: 23px;
+        top: 54%; left: 47%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #arrowBounce {
+        width: 17px;
+        height: 17px;
+        top: 64%; left: 48%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**Ipad 768x1024
+@media all and (max-width: 769px) {
+    #arrowBounce {
+        transform: scale(1.7);
+        top: 83%; left: 0%; margin-top: 2px; margin-left: 0px;
+    }
+}**/
+
+/**IphoneX 375x812
+@media (max-width: 376px) and (max-height: 813px) {
+    #arrowBounce {
+        transform: scale(1.3);
+        top: 65%; left: 0%; margin-top: 4px; margin-left: 0px;
+    }
+}**/
+
+#arrowBounce2 {
+    position: absolute;
+    z-index: 3;
+    background-image: url("arrow.png");
+    background-size: cover;
+    width: 83px;
+    height: 80px;
+    animation: bounce 2s infinite;
+    animation-play-state: running;
+}
+
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #arrowBounce2 {
+        width: 83px;
+        height: 80px;
+        top: 45%; left: 35%; margin-top: 0px; margin-left: -2px;
+    }
+}
+
+/**Desktop 1920x1080**/
+@media all and (max-width: 1921px){
+    #arrowBounce2 {
+        width: 53px;
+        height: 50px;
+        top: 47%; left: 38%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #arrowBounce2 {
+        width: 43px;
+        height: 40px;
+        top: 39%; left: 37%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #arrowBounce2 {
+        width: 27px;
+        height: 27px;
+        top: 46%; left: 38%; margin-top: 0px; margin-left: -8px;
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #arrowBounce2 {
+        width: 28px;
+        height: 28px;
+        top: 50%; left: 38%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**Tablet 가로 768X481**/
+@media all and (max-width: 769px){
+    #arrowBounce2 {
+        width: 23px;
+        height: 23px;
+        top: 43%; left: 35%; margin-top: 0px; margin-left: -7px;
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #arrowBounce2 {
+        width: 23px;
+        height: 23px;
+        top: 43%; left: 19%; margin-top: 0px; margin-left: 2px;
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #arrowBounce2 {
+        width: 23px;
+        height: 23px;
+        top: 43%; left: 15%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #arrowBounce2 {
+        width: 17px;
+        height: 17px;
+        top: 56%; left: 20%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+#walkingwithbaby {
+    position: absolute;
+    z-index: 3;
+    background-image: url("walkingwithbaby.gif");
+    width: 490px;
+    height: 495px;
+}
+
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #walkingwithbaby {
+        transform: scale(1.0);
+        top: 51%; left: 27%; margin-top: 18px; margin-left: -30px;
+    }
+
+    .walkingwithbaby {
+        animation: walkingwithbaby 4s linear 1;
+        animation-fill-mode: both;
+    }
+    
+    @keyframes  walkingwithbaby {
+        0% {left:27%;}
+        100% {left:101%;}
+    }
+
+    #walkingwithbaby:hover {
+        transform: scale(1.03);
+        cursor: pointer;
+    }
+}
+
+
+/**Desktop 1920x1080**/
+@media all and (max-width: 1921px){
+    #walkingwithbaby {
+        transform: scale(0.75);
+        top: 45%; left: 26%; margin-top: 20px; margin-left: -21px;
+    }
+
+    .walkingwithbaby {
+        animation: walkingwithbaby 4s linear 1;
+        animation-fill-mode: both;
+    }
+    
+    @keyframes  walkingwithbaby {
+        0% {left:26%;}
+        100% {left:98%;}
+    }
+
+    #walkingwithbaby:hover {
+        transform: scale(0.78);
+        cursor: pointer;
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #walkingwithbaby {
+        transform: scale(0.6);
+        top: 29%; left: 21%; margin-top: 25px; margin-left: -13px;
+    }
+
+    .walkingwithbaby {
+        animation: walkingwithbaby 4s linear 1;
+        animation-fill-mode: both;
+    }
+    
+    @keyframes  walkingwithbaby {
+        0% {left:21%;}
+        100% {left:94%;}
+    }
+
+    #walkingwithbaby:hover {
+        transform: scale(0.63);
+        cursor: pointer;
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #walkingwithbaby {
+        transform: scale(0.4);
+        top: 25%; left: 19%; margin-top: 7px; margin-left: -10px;
+    }
+
+    .walkingwithbaby {
+        animation: walkingwithbaby 4s linear 1;
+        animation-fill-mode: both;
+    }
+    
+    @keyframes  walkingwithbaby {
+        0% {left:19%;}
+        100% {left:89%;}
+    }
+
+    #walkingwithbaby:hover {
+        transform: scale(0.43);
+        cursor: pointer;
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #walkingwithbaby {
+        transform: scale(0.4);
+        top: 33%; left: 15%; margin-top: 2px; margin-left: -7px;
+    }
+
+    .walkingwithbaby {
+        animation: walkingwithbaby 4s linear 1;
+        animation-fill-mode: both;
+    }
+    
+    @keyframes  walkingwithbaby {
+        0% {left:15%;}
+        100% {left:95%;}
+    }
+
+    #walkingwithbaby:hover {
+        transform: scale(0.43);
+        cursor: pointer;
+    }
+}
+
+/**Tablet 768X481**/
+@media all and (max-width: 769px){
+    #walkingwithbaby {
+        transform: scale(0.35);
+        top: 17%; left: 3%; margin-top: 1px; margin-left: -5px;
+    }
+
+    .walkingwithbaby {
+        animation: walkingwithbaby 4s linear 1;
+        animation-fill-mode: both;
+    }
+    
+    @keyframes  walkingwithbaby {
+        0% {left:3%;}
+        100% {left:88%;}
+    }
+
+    #walkingwithbaby:hover {
+        transform: scale(0.38);
+        cursor: pointer;
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #walkingwithbaby {
+        transform: scale(0.35);
+        top: 17%; left: -37%; margin-top: 1px; margin-left: -7px;
+    }
+    
+    .walkingwithbaby {
+        animation: walkingwithbaby 4s linear 1;
+        animation-fill-mode: both;
+    }
+    
+    @keyframes  walkingwithbaby {
+        0% {left:-37%;}
+        100% {left:90%;}
+    }
+
+    #walkingwithbaby:hover {
+        transform: scale(0.38);
+        cursor: pointer;
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #walkingwithbaby {
+        transform: scale(0.35);
+        top: 17%; left: -44%; margin-top: 0px; margin-left: 0px;
+    }
+
+    .walkingwithbaby {
+        animation: walkingwithbaby 4s linear 1;
+        animation-fill-mode: both;
+    }
+    
+    @keyframes  walkingwithbaby {
+        0% {left:-44%;}
+        100% {left:63%;}
+    }
+
+    #walkingwithbaby:hover {
+        transform: scale(0.38);
+        cursor: pointer;
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #walkingwithbaby {
+        transform: scale(0.25);
+        top: 24%; left: -56%; margin-top: 0px; margin-left: -3px;
+    }
+
+    .walkingwithbaby {
+        animation: walkingwithbaby 4s linear 1;
+        animation-fill-mode: both;
+    }
+    
+    @keyframes  walkingwithbaby {
+        0% {left:-56%;}
+        100% {left:64%;}
+    }
+
+    #walkingwithbaby:hover {
+        transform: scale(0.28);
+        cursor: pointer;
+    }
+}
+
+#howtoplay {
+    position: absolute;
+    z-index: 3;
+    background-image: url("howtoplay.png");
+    width: 580px;
+    height: 395px;
+    top:8%; left: 18%; margin-top: -10px; margin-left: 7px;
+    font-weight: 700;
+} 
+
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #howtoplay {
+        transform: scale(2.2);
+        top: 35%; left: 37%; margin-top: 0px; margin-left: -15px;
+    }
+}
+
+
+/**Desktop 1920x1080**/
+@media all and (max-width: 1921px){
+    #howtoplay {
+        transform: scale(1.6);
+        top: 32%; left: 35%; margin-top: 0px; margin-left: 10px;
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #howtoplay {
+        transform: scale(1.3);
+        top: 24%; left: 30%; margin-top: -3px; margin-left: -2px;
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #howtoplay {
+        transform: scale(1.0);
+        top: 15%; left: 26%; margin-top: 0px; margin-left: 3px;
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #howtoplay {
+        transform: scale(1.0);
+        top: 16%; left: 22%; margin-top: 10px; margin-left: -5px;
+    }
+}
+
+/**Tablet 768X481**/
+@media all and (max-width: 769px){
+    #howtoplay {
+        transform: scale(0.7);
+        top: 9%; left: 14%; margin-top: 0px; margin-left: -10px;
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #howtoplay {
+        transform: scale(0.6);
+        top: 9%; left: -18%; margin-top: 0px; margin-left: 4px;
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #howtoplay {
+        transform: scale(0.6);
+        top: 9%; left: -26%; margin-top: 0px; margin-left: -3px;
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #howtoplay {
+        transform: scale(0.5);
+        top: 9%; left: -39%; margin-top: 0px; margin-left: -3px;
+    }
+}
+
+#goBtn {
+    position: absolute;
+    z-index: 4;
+    top: 35%; left: 35%; margin-top: 5px; margin-left: 0px;
+    font-family: "My Font";
+    transform: translateX(-50%);
+    color: #ea0054;
+    cursor: pointer;
+}
+
+/**4K 2690X1376**/
+@media all and /**(min-width:1921px) and**/ (max-width: 2691px) {
+    #goBtn {
+        width: 200px;
+        height: 90px;
+        font-size:7em;
+        font-weight: 700;
+        top: 66%; left: 49%; margin-top: 0px; margin-left: -3px;
+    }
+}
+
+/**Desktop 1920x1080**/
+@media (max-width: 1921px) {
+    #goBtn {
+        width: 200px;
+        height: 90px;
+        font-size:5em;
+        font-weight: 700;
+        top: 66%; left: 54%; margin-top: 0px; margin-left: -2px;
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #goBtn {
+        font-size:4em;
+        font-weight: 700;
+        top: 67%; left: 54%; margin-top: 15px; margin-left: 10px;
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #goBtn {
+        font-size:2.8em;
+        font-weight: 700;
+        top: 68%; left: 55%; margin-top: -4px; margin-left: -5px;
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #goBtn {
+        font-size:2.8em;
+        font-weight: 700;
+        top: 65%; left: 56%; margin-top: 3px; margin-left: 7px;
+    }
+}
+
+/**Tablet 가로 768X481**/
+@media all and (max-width: 769px){
+    #goBtn {
+        font-size:2.0em;
+        font-weight: 600;
+        top: 65%; left: 61%; margin-top: 3px; margin-left: -3px;
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #goBtn {
+        font-size:1.7em;
+        font-weight: 600;
+        top: 63%; left: 69%; margin-top: 3px; margin-left: 6px;
+    }
+}
+
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #goBtn {
+        font-size:1.7em;
+        font-weight: 600;
+        top: 63%; left: 72%; margin-top: 3px; margin-left: 2px;
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #goBtn {
+        font-size:1.5em;
+        font-weight: 600;
+        top: 61%; left: 76%; margin-top: 0px; margin-left: 3px;
+    }
+}
+
+/**Ipad 768x1024
+@media (max-width: 769px) {
+    #startBtn {
+        font-size:3.8em;
+        font-weight: 800;
+        top: 49%; left: 16%; margin-top: 0px; margin-left: 9px;
+    }
+}**/
+
+/**IphoneX 375x812
+@media (max-width: 376px) and (max-height: 813px) {
+    #startBtn {
+        font-size:3em;
+        font-weight: 800;
+        top: 36%; left: 7%; margin-top: 5px; margin-left: 1px;}
+}**/
+
+#goBtn:hover {
+    color: hsl(243, 80%, 62%);
+    cursor: pointer;
+}
+
+#jumpNum {
+    position: absolute;
+    z-index: 3;
+    width: 300px;
+    height: 90px;
+    top: 6%; left: 3%;
+    font-family: "My Font";
+    font-weight: bolder;
+}
+
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #jumpNum {
+        font-size:3.5em;
+        font-weight: 700;
+    }
+}
+
+/**Desktop 1920x1080**/
+@media (max-width: 1921px) {
+    #jumpNum {
+        font-size:3.0em;
+        font-weight: 700;}
+    }
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #jumpNum {
+        font-size:2.5em;
+        font-weight: 700;
+}
+    }
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #jumpNum {
+        font-size:1.8em;
+        font-weight: 700;
+}
+    }
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #jumpNum {
+        font-size:1.8em;
+        font-weight: 700;
+}
+    }
+
+
+/**Tablet 가로 768X481**/
+@media all and (max-width: 769px){
+    #jumpNum {
+        font-size:1.3em;
+        font-weight: 700;
+}
+    }
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #jumpNum {
+        font-size:1.0em;
+        font-weight: 700;
+}
+    }
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #jumpNum {
+        font-size:1.0em;
+        font-weight: 700;
+}
+    }
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #jumpNum {
+        font-size:1.0em;
+        font-weight: 700;
+}
+    }
+
+#character {
+    position: absolute;
+    z-index: 3;
+    background-image: url("walkingwithbaby.gif");
+    width: 490px;
+    height: 495px;
+}
+
+.character {
+    animation: character 2s linear 1;
+    animation-fill-mode: both;
+}
+
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #character {
+        transform: scale(1.0);
+        top: 52%; left: -17%; margin-top: 4px; margin-left: 0px;
+    }
+    
+    @keyframes character {
+        0% {left:-17%;}
+        100% {left:15%;}
+    }
+}
+
+/**Desktop 1920x1080**/
+@media all and (max-width: 1921px){
+    #character {
+        transform: scale(0.75);
+        top: 46%; left: -19%; margin-top: 13px; margin-left: 0px;
+    }
+    
+    @keyframes character {
+        0% {left:-19%;}
+        100% {left:12%;}
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #character {
+        transform: scale(0.6);
+        top: 33%; left: -21%; margin-top: 0px; margin-left: 0px;
+    }
+
+    @keyframes character {
+        0% {left:-21%;}
+        100% {left:5%;}
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #character {
+        transform: scale(0.4);
+        top: 26%; left: -23%; margin-top: 2px; margin-left: 0px;
+    }
+
+    @keyframes character {
+        0% {left:-23%;}
+        100% {left:3%;}
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #character {
+        transform: scale(0.4);
+        top: 33%; left: -30%; margin-top: 2px; margin-left: 0px;
+    }
+    
+    @keyframes character {
+        0% {left:-30%;}
+        100% {left:-1%;}
+    }
+}
+
+/**Tablet 768X481**/
+@media all and (max-width: 769px){
+    #character {
+        transform: scale(0.35);
+        top: 18%; left: -50%; margin-top: 2px; margin-left: 0px;
+    }
+    
+    @keyframes character {
+        0% {left:-50%;}
+        100% {left:-13%;}
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #character {
+        transform: scale(0.35);
+        top: 17%; left: -80%; margin-top: 0px; margin-left: 0px;
+    }
+    
+    @keyframes character {
+        0% {left:-80%;}
+        100% {left:-37%;}
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #character {
+        transform: scale(0.35);
+        top: 17%; left: -90%; margin-top: 0px; margin-left: 0px;
+    }
+    
+    @keyframes character {
+        0% {left:-90%;}
+        100% {left:-42%;}
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #character {
+        transform: scale(0.25);
+        top: 24%; left: -90%; margin-top: 0px; margin-left: 0px;
+    }
+    
+    @keyframes character {
+        0% {left:-90%;}
+        100% {left:-52%;}
+    }
+}
+
+#pauseCharacter {
+    position: absolute;
+    z-index: 3;
+    background-image: url("pausecharacter.png");
+    width: 470px;
+    height: 484px;
+}
+
+.jump {
+    animation: jump 1s ease;    
+}
+
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #pauseCharacter  {
+        transform: scale(1.0);
+        top: 53%; left: 15%; margin-top: 4px; margin-left: 4px;
+    }
+
+    @keyframes jump {
+        0% {top: 52%;}
+        20% {top: 57%;}
+        50% {top: 22%;}
+        80% {top: 22%;}
+        95%  {top: 57%;}
+        100% {top: 52%;}
+    }
+}
+
+/**Desktop 1920x1080**/
+@media all and (max-width: 1921px){
+    #pauseCharacter  {
+        transform: scale(0.75);
+        top: 46%; left: 12%; margin-top: 13px; margin-left: 5px;
+    }
+
+    @keyframes jump {
+        0% {top: 46%;}
+        20% {top: 51%;}
+        50% {top: 16%;}
+        80% {top: 16%;}
+        95%  {top: 51%;}
+        100% {top: 46%;}
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #pauseCharacter  {
+        transform: scale(0.6);
+        top: 33%; left: 6%; margin-top: 0px; margin-left: -1px;
+    }
+
+    @keyframes jump {
+        0% {top: 33%;}
+        20% {top: 38%;}
+        50% {top: 3%;}
+        80% {top: 3%;}
+        95%  {top: 38%;}
+        100% {top: 33%;}
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #pauseCharacter  {
+        transform: scale(0.4);
+        top: 26%; left: 4%; margin-top: 5px; margin-left: -1px;
+    }
+
+    @keyframes jump {
+        0% {top: 26%;}
+        20% {top: 31%;}
+        50% {top: -4%;}
+        80% {top: -4%;}
+        95%  {top: 31%;}
+        100% {top: 26%;}
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #pauseCharacter  {
+        transform: scale(0.4);
+        top: 33%; left: 0%; margin-top: 5px; margin-left: 0px;
+    }
+
+    @keyframes jump {
+        0% {top: 33%;}
+        20% {top: 38%;}
+        50% {top: 3%;}
+        80% {top: 3%;}
+        95%  {top: 38%;}
+        100% {top: 33%;}
+    }
+}
+
+/**Tablet 768X481**/
+@media all and (max-width: 769px){
+    #pauseCharacter  {
+        transform: scale(0.35);
+        top: 18%; left: -12%; margin-top: 6px; margin-left: 2px;
+    }
+
+    @keyframes jump {
+        0% {top: 18%;}
+        20% {top: 23%;}
+        50% {top: -12%;}
+        80% {top: -12%;}
+        95%  {top: 23%;}
+        100% {top: 18%;}
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #pauseCharacter  {
+        transform: scale(0.35);
+        top: 17%; left: -35%; margin-top: 4px; margin-left: 1px;
+    }
+
+    @keyframes jump {
+        0% {top: 17%;}
+        20% {top: 22%;}
+        50% {top: -13%;}
+        80% {top: -13%;}
+        95%  {top: 22%;}
+        100% {top: 17%;}
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #pauseCharacter  {
+        transform: scale(0.35);
+        top: 17%; left: -40%; margin-top: 4px; margin-left: 2px;
+    }
+
+    @keyframes jump {
+        0% {top: 17%;}
+        20% {top: 20%;}
+        50% {top: -13%;}
+        80% {top: -13%;}
+        95%  {top: 20%;}
+        100% {top: 17%;}
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #pauseCharacter  {
+        transform: scale(0.25);
+        top: 25%; left: -49%; margin-top: 0px; margin-left: 0px;
+    }
+
+    @keyframes jump {
+        0% {top: 25%;}
+        20% {top: 28%;}
+        50% {top: 0%;}
+        80% {top: 0%;}
+        95%  {top: 28%;}
+        100% {top: 25%;}
+    }
+}
+
+#bomb {
+    position: absolute;
+    z-index: 2;
+    background-image: url("bomb.gif");
+    width: 361px;
+    height: 313px;
+}
+
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #bomb  {
+        transform: scale(1.0);
+        top: 65%; left: 64%; margin-top: 6px; margin-left: 0px;
+    }
+    
+    .bomb {
+        animation: bomb 2.9s linear infinite;
+    }
+    
+    @keyframes bomb {
+        0% {left: 100%}
+        100% {left: -10%;}
+    }
+}
+
+/**Desktop 1920x1080**/
+@media all and (max-width: 1921px){
+    #bomb  {
+        transform: scale(0.75);
+        top: 61%; left: 65%; margin-top: 8px; margin-left: 0px;
+    }
+    
+    .bomb {
+        animation: bomb 2.9s linear infinite;
+    }
+    
+    @keyframes bomb {
+        0% {left: 90%}
+        100% {left: -13%;}
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #bomb  {
+        transform: scale(0.6);
+        top: 51%; left: 64%; margin-top: 8px; margin-left: 0px;
+    }
+    
+    .bomb {
+        animation: bomb 2.9s linear infinite;
+    }
+    
+    @keyframes bomb {
+        0% {left: 95%}
+        100% {left: -17%;}
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #bomb  {
+        transform: scale(0.4);
+        top: 47%; left: 64%; margin-top: 8px; margin-left: -4px;
+    }
+    
+    .bomb {
+        animation: bomb 3s linear infinite;
+    }
+    
+    @keyframes bomb {
+        0% {left: 95%}
+        100% {left: -17%;}
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #bomb  {
+        transform: scale(0.4);
+        top: 52%; left: 58%; margin-top: 8px; margin-left: 0px;
+    }
+    
+    .bomb {
+        animation: bomb 2.7s linear infinite;
+    }
+    
+    @keyframes bomb {
+        0% {left: 90%}
+        100% {left: -20%;}
+    }
+}
+
+/**Tablet 768X481**/
+@media all and (max-width: 769px){
+    #bomb  {
+        transform: scale(0.35);
+        top: 41%; left: 57%; margin-top: 8px; margin-left: 0px;
+    }
+    
+    .bomb {
+        animation: bomb 2.3s linear infinite;
+    }
+    
+    @keyframes bomb {
+        0% {left: 85%}
+        100% {left: -25%;}
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #bomb  {
+        transform: scale(0.35);
+        top: 41%; left: 37%; margin-top: 8px; margin-left: 0px;
+    }
+    
+    .bomb {
+        animation: bomb 1.8s linear infinite;
+    }
+    
+    @keyframes bomb {
+        0% {left: 85%}
+        100% {left: -55%;}
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #bomb  {
+        transform: scale(0.35);
+        top: 41%; left: 32%; margin-top: 8px; margin-left: 0px;
+    }
+    
+    .bomb {
+        animation: bomb 1.6s linear infinite;
+    }
+    
+    @keyframes bomb {
+        0% {left: 68%}
+        100% {left: -60%;}
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #bomb  {
+        transform: scale(0.25);
+        top: 47%; left: 20%; margin-top: 1px; margin-left: 0px;
+    }
+
+    .bomb {
+        animation: bomb 1.7s linear infinite;
+    }
+
+    @keyframes bomb {
+        0% {left: 53%}
+        100% {left: -80%;}
+    }
+}
+
+#gameover {
+    position: absolute;
+    z-index: 10;
+    top:21%; left:26%; margin-top: 0px; margin-left: 5px;
+    font-family: "My Font";
+    font-size: 4em;  
+    font-weight: bolder;
+    animation: twinkle 0.5s linear 2;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #gameover  {
+        font-size: 9em;
+        top: 39%; left: 36%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**Desktop 1920x1080**/
+@media all and (max-width: 1921px){
+    #gameover  {
+        font-size: 7em;
+        top: 39%; left: 37%; margin-top: 0px; margin-left: 2px;
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #gameover  {
+        font-size: 5em;
+        top: 39%; left: 37%; margin-top: 0px; margin-left: 5px;
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #gameover  {
+        font-size: 4em;
+        top: 38%; left: 39%; margin-top: 0px; margin-left: -1px;
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #gameover  {
+        font-size: 4em;
+        top: 38%; left: 37%; margin-top: 0px; margin-left: -3px;
+    }
+}
+
+/**Tablet 768X481**/
+@media all and (max-width: 769px){
+    #gameover  {
+        font-size: 3.5em;
+        top: 36%; left: 33%; margin-top: 0px; margin-left: 4px;
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #gameover  {
+        font-size: 2.5em;
+        top: 36%; left: 28%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #gameover  {
+        font-size: 2.5em;
+        top: 40%; left: 25%; margin-top: 0px; margin-left: 2px;
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #gameover  {
+        font-size: 2em;
+        top: 40%; left: 25%; margin-top: 0px; margin-left: 8.5px;
+    }
+}
+
+#replayBtn {
+    position: absolute;
+    z-index: 10;
+    font-family: "My Font";
+    transform: translateX(-50%);
+    color: #ea0054;
+}
+
+#replayBtn:hover {
+    color: hsl(243, 80%, 62%);
+    cursor: pointer;
+}
+
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #replayBtn   {
+        font-size:6.3em;
+        font-weight: 800;
+        top: 48%; left: 48%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**Desktop 1920x1080**/
+@media all and (max-width: 1921px){
+    #replayBtn   {
+        font-size:5em;
+        font-weight: 800;
+        top: 48%; left: 50%; margin-top: 0px; margin-left: 2px;
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #replayBtn   {
+        font-size:3.6em;
+        font-weight: 800;
+        top: 48%; left: 50%; margin-top: 0px; margin-left: -4px;
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #replayBtn   {
+        font-size:3em;
+        font-weight: 800;
+        top: 47%; left: 50%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #replayBtn   {
+        font-size:3em;
+        font-weight: 800;
+        top: 46%; left: 51%; margin-top: 3px; margin-left: -6px;
+    }
+}
+
+/**Tablet 768X481**/
+@media all and (max-width: 769px){
+    #replayBtn   {
+        font-size:2.2em;
+        font-weight: 800;
+        top: 46%; left: 50%; margin-top: 0px; margin-left: -2px;
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #replayBtn   {
+        font-size:1.8em;
+        font-weight: 800;
+        top: 43%; left: 49%; margin-top: 2px; margin-left: 0px;
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #replayBtn   {
+        font-size:1.8em;
+        font-weight: 800;
+        top: 47%; left: 50%; margin-top: 2px; margin-left: -3px;
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #replayBtn   {
+        font-size:1.5em;
+        font-weight: 800;
+        top: 46%; left: 50%; margin-top: 0px; margin-left: 1px;
+    }
+}
+
+#volume {
+    background-image: url("volume.png");
+    position: absolute;
+    background-color: none;
+    z-index: 10;
+    width: 480px;
+    height: 480px;
+}
+
+#volume:hover {
+    cursor: pointer;
+}
+
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #volume {
+        transform: scale(0.22);
+        top: -9%; left: 87%; margin-top: 2px; margin-left: 0px;
+    }
+}
+
+/**Desktop 1920x1080**/
+@media all and (max-width: 1921px){
+    #volume {
+        transform: scale(0.18);
+        top: -12%; left: 82%; margin-top: 2px; margin-left: 0px;
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #volume {
+        transform: scale(0.14);
+        top: -22%; left: 79%; margin-top: 2px; margin-left: -5px;
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #volume {
+        transform: scale(0.1);
+        top: -32%; left: 77%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #volume {
+        transform: scale(0.1);
+        top: -28%; left: 71%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**Tablet 가로 768X481**/
+@media all and (max-width: 769px){
+    #volume {
+        transform: scale(0.08);
+        top: -40%; left: 63%; margin-top: -1px; margin-left: 0px;
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #volume {
+        transform: scale(0.07);
+        top: -40%; left: 34%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #volume {
+        transform: scale(0.065);
+        top: -41%; left: 27%; margin-top: -2px; margin-left: 0px;
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #volume {
+        transform: scale(0.06);
+        top: -41%; left: 15%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+#mute {
+    background-image: url("mute.png");
+    position: absolute;
+    background-color: none;
+    z-index: 10;
+    width: 448px;
+    height: 448px;
+}
+
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #mute {
+        transform: scale(0.22);
+        top: -8%; left: 87%; margin-top: 5px; margin-left: -2px;
+    }
+}
+
+/**Desktop 1920x1080**/
+@media all and (max-width: 1921px){
+    #mute {
+        transform: scale(0.18);
+        top: -10%; left: 82%; margin-top: -3px; margin-left: 1.5px;
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #mute {
+        transform: scale(0.14);
+        top: -20%; left: 79%; margin-top: 3px; margin-left: 0px;
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #mute {
+    transform: scale(0.1);
+    top: -29%; left:78%; margin-top: -1px; margin-left: -5px;
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #mute {
+        transform: scale(0.1);
+        top: -26%; left: 72%; margin-top: 3px; margin-left: -2px;
+    }
+}
+
+/**Tablet 가로 768X481**/
+@media all and (max-width: 769px){
+    #mute {
+        transform: scale(0.08);
+        top: -37%; left: 64%; margin-top: 0.5px; margin-left: 2.2px;
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #mute {
+        transform: scale(0.07);
+        top: -37%; left: 36%; margin-top: 1px; margin-left: 1.9px;
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #mute {
+        transform: scale(0.065);
+        top: -38%; left: 30%; margin-top: -0.5px; margin-left: -0.5px;
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #mute {
+        transform: scale(0.06);
+        top: -38%; left: 18%; margin-top: 1.5px; margin-left: 1.5px;
+    }
+}
+
+#mute:hover {
+    cursor: pointer;
+}
+
+#nextStage {
+    position: absolute;
+    z-index: 10;
+    top:21%; left:26%; margin-top: 0px; margin-left: 5px;
+    font-family: "My Font";
+    font-size: 4em;  
+    font-weight: bolder;
+    animation: twinkle 0.5s linear 2;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.2;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #nextStage  {
+        font-size: 9em;
+        top: 39%; left: 36%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**Desktop 1920x1080**/
+@media all and (max-width: 1921px){
+    #nextStage  {
+        font-size: 7em;
+        top: 39%; left: 37%; margin-top: 0px; margin-left: 2px;
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #nextStage  {
+        font-size: 5em;
+        top: 39%; left: 37%; margin-top: 0px; margin-left: 5px;
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #nextStage  {
+        font-size: 4em;
+        top: 38%; left: 39%; margin-top: 0px; margin-left: -1px;
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #nextStage  {
+        font-size: 4em;
+        top: 38%; left: 37%; margin-top: 0px; margin-left: -3px;
+    }
+}
+
+/**Tablet 768X481**/
+@media all and (max-width: 769px){
+    #nextStage  {
+        font-size: 3.5em;
+        top: 36%; left: 33%; margin-top: 0px; margin-left: 4px;
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #nextStage  {
+        font-size: 2.5em;
+        top: 36%; left: 28%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #nextStage  {
+        font-size: 2.5em;
+        top: 40%; left: 25%; margin-top: 0px; margin-left: 2px;
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #nextStage  {
+        font-size: 2em;
+        top: 40%; left: 25%; margin-top: 0px; margin-left: 8.5px;
+    }
+}
+
+#playBtn {
+    position: absolute;
+    z-index: 10;
+    font-family: "My Font";
+    transform: translateX(-50%);
+    color: #ea0054;
+}
+
+#playBtn:hover {
+    color: hsl(243, 80%, 62%);
+    cursor: pointer;
+}
+
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #playBtn   {
+        font-size:6.3em;
+        font-weight: 800;
+        top: 48%; left: 48%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**Desktop 1920x1080**/
+@media all and (max-width: 1921px){
+    #playBtn   {
+        font-size:5em;
+        font-weight: 800;
+        top: 48%; left: 50%; margin-top: 0px; margin-left: 2px;
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #playBtn   {
+        font-size:3.6em;
+        font-weight: 800;
+        top: 48%; left: 50%; margin-top: 0px; margin-left: -4px;
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #playBtn   {
+        font-size:3em;
+        font-weight: 800;
+        top: 47%; left: 50%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #playBtn   {
+        font-size:3em;
+        font-weight: 800;
+        top: 46%; left: 51%; margin-top: 3px; margin-left: -6px;
+    }
+}
+
+/**Tablet 768X481**/
+@media all and (max-width: 769px){
+    #playBtn   {
+        font-size:2.2em;
+        font-weight: 800;
+        top: 46%; left: 50%; margin-top: 0px; margin-left: -2px;
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #playBtn   {
+        font-size:1.8em;
+        font-weight: 800;
+        top: 43%; left: 49%; margin-top: 2px; margin-left: 0px;
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #playBtn   {
+        font-size:1.8em;
+        font-weight: 800;
+        top: 47%; left: 50%; margin-top: 2px; margin-left: -3px;
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #playBtn   {
+        font-size:1.5em;
+        font-weight: 800;
+        top: 46%; left: 50%; margin-top: 0px; margin-left: 1px;
+    }
+}
+
+#preventer{
+    position: absolute;
+    z-index: 7;
+    background-color:none;
+    width: 2560px;
+    height: 1381px;
+    top: 0%; left: 0%; margin-top: 0px; margin-left: 0px;
+}
+
+/**Sound**/
+.clickSound {
+    position: absolute;
+    z-index: 5;
+}
+
+.clickSound2 {
+    position: absolute;
+    z-index: 5;
+}
+
+.charSound {
+    position: absolute;
+    z-index: 5;
+}
+
+.charSound2 {
+    position: absolute;
+    z-index: 5;
+}
+
+.charSound3 {
+    position: absolute;
+    z-index: 5;
+}
+
+.jumpSound {
+    position: absolute;
+    z-index: 5;   
+}
+
+.gameoverSound {
+    position: absolute;
+    z-index: 6;
+}
+
+.stage {
+    position: absolute;
+    z-index: 2;
+}
+
+.stage2 {
+    position: absolute;
+    z-index: 2;
+}
+
+.pop3 {
+    position: absolute;
+    z-index: 10;
+}
+
+.next {
+    position: absolute;
+    z-index: 5;
+}
+
+#jumpPad {
+    position: absolute;
+    z-index: 6;
+    background-color: none;
+    width: 2560px;
+    height: 1381px;
+    top: 0%; left: 0%; margin-top: 0px; margin-left: 0px;
+}
+
+#game2 {
+    position: relative;
+    background-color: #93d6e5;
+    background-repeat: repeat;
+}
+
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #game2 {
+        width: 2690px;
+        height: 1376px;
+    }
+}
+
+/**Desktop 1920x1080**/
+@media all and (max-width: 1921px){
+    #game2 {
+        width: 1920px;
+        height: 1080px;
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #game2 {
+        width: 1440px;
+        height: 740px;
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #game2 {
+        width: 1280px;
+        height: 580px;
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #game2 {
+        width: 1024px;
+        height: 642px;
+    }
+}
+
+/**Tablet 768X481**/
+@media all and (max-width: 769px){
+    #game2 {
+        width: 768px;
+        height: 481px;
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #game2 {
+        width: 425px;
+        height: 481px;
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #game2 {
+        width: 375px;
+        height: 481px;
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #game2 {
+        width: 320px;
+        height: 481px;
+    }
+}
+
+#ground2 {
+    position: absolute;
+    background-image: url("ground.png");
+    background-repeat: repeat-x;
+    width: 1920px;
+    height: 92px;
+    transform: scale(1.0);
+    top: 45%; left: 0%; margin-top: 1px; margin-left: 0px;
+}
+
+.earthquake {
+    animation: earthquake 2s linear 1;
+    animation-fill-mode: both;
+}
+
+/**4K 2690X1376**/
+@media all and /**(min-width:1921px) and**/ (max-width: 2691px) {
+    #ground2 {
+        transform: scale(2.0);
+        top: 90%; left: 0%; margin-top: 0px; margin-left: 0px;
+    }
+
+    @keyframes earthquake {
+        0% {top:90%;}
+        10% {top:92%;}
+        20% {top:90%;}
+        30% {top:92%;}
+        40% {top:90%;}
+        50% {top:92%;}
+        60% {top:90%;}
+        70% {top:92%;}
+        80% {top:90%;}
+        85% {top:92%;}
+        100% {top:107%;}
+    }
+}
+
+/**Desktop 1920x1080**/
+@media all and (max-width: 1921px){
+    #ground2 {
+        transform: scale(1.7);
+        top: 87%; left: 0%; margin-top: 17px; margin-left: 0px;
+    }
+
+    @keyframes earthquake {
+        0% {top:87%;}
+        10% {top:89%;}
+        20% {top:87%;}
+        30% {top:89%;}
+        40% {top:87%;}
+        50% {top:89%;}
+        60% {top:87%;}
+        70% {top:89%;}
+        80% {top:87%;}
+        85% {top:89%;}
+        100% {top:104%;}
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #ground2 {
+        transform: scale(1.3);
+        top: 85%; left: 0%; margin-top: 6px; margin-left: 0px;
+    }
+
+    @keyframes earthquake {
+        0% {top:85%;}
+        10% {top:87%;}
+        20% {top:85%;}
+        30% {top:87%;}
+        40% {top:85%;}
+        50% {top:87%;}
+        60% {top:85%;}
+        70% {top:87%;}
+        80% {top:85%;}
+        85% {top:87%;}
+        100% {top:102%;}
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #ground2 {
+        transform: scale(1.0);
+        top: 83%; left: 0%; margin-top: 7px; margin-left: 0px;
+    }
+
+    @keyframes earthquake {
+        0% {top:83%;}
+        10% {top:85%;}
+        20% {top:83%;}
+        30% {top:85%;}
+        40% {top:83%;}
+        50% {top:85%;}
+        60% {top:83%;}
+        70% {top:85%;}
+        80% {top:83%;}
+        85% {top:85%;}
+        100% {top:100%;}
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #ground2 {
+        transform: scale(1.0);
+        top: 85%; left: 0%; margin-top: 5px; margin-left: 0px;
+    }
+
+    @keyframes earthquake {
+        0% {top:85%;}
+        10% {top:857%;}
+        20% {top:85%;}
+        30% {top:87%;}
+        40% {top:85%;}
+        50% {top:87%;}
+        60% {top:85%;}
+        70% {top:87%;}
+        80% {top:85%;}
+        85% {top:87%;}
+        100% {top:102%;}
+    }
+}
+
+/**Tablet 가로 768X481**/
+@media all and (max-width: 769px){
+    #ground2 {
+        transform: scale(0.8);
+        top: 82%; left: -25%; margin-top: 5px; margin-left: 0px;
+    }
+
+    @keyframes earthquake {
+        0% {top:82%;}
+        10% {top:84%;}
+        20% {top:82%;}
+        30% {top:84%;}
+        40% {top:82%;}
+        50% {top:84%;}
+        60% {top:82%;}
+        70% {top:84%;}
+        80% {top:82%;}
+        85% {top:84%;}
+        100% {top:99%;}
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #ground2 {
+        transform: scale(0.8);
+        top: 81%; left: -46%; margin-top: 9px; margin-left: 0px;
+    }
+
+    @keyframes earthquake {
+        0% {top:81%;}
+        10% {top:83%;}
+        20% {top:81%;}
+        30% {top:83%;}
+        40% {top:81%;}
+        50% {top:83%;}
+        60% {top:81%;}
+        70% {top:83%;}
+        80% {top:81%;}
+        85% {top:83%;}
+        100% {top:98%;}
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #ground2 {
+        transform: scale(0.8);
+        top: 82%; left: -55%; margin-top: 4px; margin-left: 0px;
+    }
+
+    @keyframes earthquake {
+        0% {top:82%;}
+        10% {top:84%;}
+        20% {top:82%;}
+        30% {top:84%;}
+        40% {top:82%;}
+        50% {top:84%;}
+        60% {top:82%;}
+        70% {top:84%;}
+        80% {top:82%;}
+        85% {top:84%;}
+        100% {top:99%;}
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #ground2 {
+        transform: scale(0.7);
+        top: 83%; left: -95%; margin-top: 4px; margin-left: 0px;
+    }
+}
+
+#cloud2 {
+    position: absolute;
+    z-index: 2;
+    background-image: url("cloud.png");
+    width: 2495px; 
+    height: 231px;
+}
+
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #cloud2 {
+        transform: scale(2.0);
+        top: 10%; right: 0%; margin-top: 16px; margin-right: 0px;
+        animation:MoveRight 60s linear infinite;
+        animation-direction: normal;
+        animation-delay: 0;
+        }
+}
+
+/**Desktop 1920x1080**/
+@media only screen and (max-width: 1921px) {
+    #cloud2 {
+        transform: scale(1.7);
+        top: 10%; right: 0%; margin-top: 16px; margin-right: 0px;
+        animation:MoveRight 60s linear infinite;
+        animation-direction: normal;
+        animation-delay: 0;
+        }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #cloud2 {
+        transform: scale(1.3);
+        top: 5%; right: 0%; margin-top: 0px; margin-right: 0px;
+        animation:MoveRight 60s linear infinite;
+        animation-direction: normal;
+        animation-delay: 0;
+        }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #cloud2 {
+        transform: scale(1.0);
+        top: 3%; right: 0%; margin-top: 0px; margin-right: 0px;
+        animation:MoveRight 60s linear infinite;
+        animation-direction: normal;
+        animation-delay: 0;
+        }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #cloud2 {
+        transform: scale(1.0);
+        top: 3%; right: 0%; margin-top: 0px; margin-right: 0px;
+        animation:MoveRight 60s linear infinite;
+        animation-direction: normal;
+        animation-delay: 0;
+        }
+}
+
+/**Tablet 가로 768X481**/
+@media all and (max-width: 769px){
+    #cloud2 {
+        transform: scale(0.8);
+        top: 3%; right: -100%; margin-top: 0px; margin-right: 0px;
+        animation:MoveRight 110s linear infinite;
+        animation-direction: normal;
+        animation-delay: 0;
+        }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #cloud2 {
+        transform: scale(0.8);
+        top: 3%; right: -100%; margin-top: 0px; margin-right: 0px;
+        animation:MoveRight 110s linear infinite;
+        animation-direction: normal;
+        animation-delay: 0;
+        }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #cloud2 {
+        transform: scale(0.8);
+        top: 3%; right: -100%; margin-top: 0px; margin-right: 0px;
+        animation:MoveRight 110s linear infinite;
+        animation-direction: normal;
+        animation-delay: 0;
+        }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #cloud2 {
+        transform: scale(0.8);
+        top: 3%; right: -220%; margin-top: 0px; margin-right: 0px;
+        animation:MoveRight 110s linear infinite;
+        animation-direction: normal;
+        animation-delay: 0;
+        }
+}
+
+#character2 {
+    position: absolute;
+    z-index: 3;
+    background-image: url("walkingwithbaby.gif");
+    width: 490px;
+    height: 495px;
+    animation: character2 2s linear 1;
+    animation-fill-mode: both;
+}
+
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #character2 {
+        transform: scale(1.0);
+        top: 52%; left: -17%; margin-top: 4px; margin-left: 0px;
+    }
+    
+    @keyframes character2 {
+        0% {left:-17%;}
+        100% {left:15%;}
+    }
+}
+
+/**Desktop 1920x1080**/
+@media all and (max-width: 1921px){
+    #character2 {
+        transform: scale(0.75);
+        top: 46%; left: -19%; margin-top: 13px; margin-left: 0px;
+    }
+    
+    @keyframes character2 {
+        0% {left:-19%;}
+        100% {left:12%;}
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #character2 {
+        transform: scale(0.6);
+        top: 33%; left: -21%; margin-top: 0px; margin-left: 0px;
+    }
+
+    @keyframes character2 {
+        0% {left:-21%;}
+        100% {left:5%;}
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #character2 {
+        transform: scale(0.4);
+        top: 26%; left: -23%; margin-top: 2px; margin-left: 0px;
+    }
+
+    @keyframes character2 {
+        0% {left:-23%;}
+        100% {left:3%;}
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #character2 {
+        transform: scale(0.4);
+        top: 33%; left: -30%; margin-top: 2px; margin-left: 0px;
+    }
+    
+    @keyframes character2 {
+        0% {left:-30%;}
+        100% {left:-1%;}
+    }
+}
+
+/**Tablet 768X481**/
+@media all and (max-width: 769px){
+    #character2 {
+        transform: scale(0.35);
+        top: 18%; left: -50%; margin-top: 2px; margin-left: 0px;
+    }
+    
+    @keyframes character2 {
+        0% {left:-50%;}
+        100% {left:-13%;}
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #character2 {
+        transform: scale(0.35);
+        top: 17%; left: -80%; margin-top: 0px; margin-left: 0px;
+    }
+    
+    @keyframes character2 {
+        0% {left:-80%;}
+        100% {left:-37%;}
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #character2 {
+        transform: scale(0.35);
+        top: 17%; left: -90%; margin-top: 0px; margin-left: 0px;
+    }
+    
+    @keyframes character2 {
+        0% {left:-90%;}
+        100% {left:-42%;}
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #character2 {
+        transform: scale(0.25);
+        top: 24%; left: -90%; margin-top: 0px; margin-left: 0px;
+    }
+    
+    @keyframes character2 {
+        0% {left:-90%;}
+        100% {left:-52%;}
+    }
+}
+
+#pauseCharacter2 {
+    position: absolute;
+    z-index: 3;
+    background-image: url("pausecharacter.png");
+    width: 470px;
+    height: 484px;
+}
+
+.charEarthquake {
+    animation: charEarthquake 2s linear 1;
+    animation-fill-mode: both;
+}
+
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #pauseCharacter2  {
+        transform: scale(1.0);
+        top: 52%; left: 15%; margin-top: 4px; margin-left: 4px;
+    }
+
+    #pauseCharacter2:hover {
+        transform: scale(1.03);
+        cursor: pointer;
+    }
+
+    @keyframes charEarthquake {
+        0% {top:52%;}
+        10% {top:54%;}
+        20% {top:52%;}
+        30% {top:54%;}
+        40% {top:52%;}
+        50% {top:54%;}
+        60% {top:52%;}
+        70% {top:54%;}
+        80% {top:52%;}
+        85% {top:54%;}
+        100% {top:66%;}
+    }
+}
+
+/**Desktop 1920x1080**/
+@media all and (max-width: 1921px){
+    #pauseCharacter2  {
+        transform: scale(0.75);
+        top: 46%; left: 12%; margin-top: 13px; margin-left: 5px;
+    }
+
+    #pauseCharacter2:hover {
+        transform: scale(0.78);
+        cursor: pointer;
+    }
+
+    @keyframes charEarthquake {
+        0% {top:46%;}
+        10% {top:48%;}
+        20% {top:46%;}
+        30% {top:48%;}
+        40% {top:46%;}
+        50% {top:48%;}
+        60% {top:46%;}
+        70% {top:48%;}
+        80% {top:46%;}
+        85% {top:48%;}
+        100% {top:60%;}
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #pauseCharacter2  {
+        transform: scale(0.6);
+        top: 33%; left: 6%; margin-top: 0px; margin-left: -1px;
+    }
+
+    #pauseCharacter2:hover {
+        transform: scale(0.63);
+        cursor: pointer;
+    }
+
+    @keyframes charEarthquake {
+        0% {top:33%;}
+        10% {top:35%;}
+        20% {top:33%;}
+        30% {top:35%;}
+        40% {top:33%;}
+        50% {top:35%;}
+        60% {top:33%;}
+        70% {top:35%;}
+        80% {top:33%;}
+        85% {top:35%;}
+        100% {top:47%;}
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #pauseCharacter2  {
+        transform: scale(0.4);
+        top: 26%; left: 4%; margin-top: 5px; margin-left: -1px;
+    }
+
+    #pauseCharacter2:hover {
+        transform: scale(0.43);
+        cursor: pointer;
+    }
+
+    @keyframes charEarthquake {
+        0% {top:26%;}
+        10% {top:28%;}
+        20% {top:26%;}
+        30% {top:28%;}
+        40% {top:26%;}
+        50% {top:28%;}
+        60% {top:26%;}
+        70% {top:28%;}
+        80% {top:26%;}
+        85% {top:28%;}
+        100% {top:40%;}
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #pauseCharacter2  {
+        transform: scale(0.4);
+        top: 33%; left: 0%; margin-top: 5px; margin-left: 0px;
+    }
+
+    #pauseCharacter2:hover {
+        transform: scale(0.43);
+        cursor: pointer;
+    }
+
+    @keyframes charEarthquake {
+        0% {top:33%;}
+        10% {top:35%;}
+        20% {top:33%;}
+        30% {top:35%;}
+        40% {top:33%;}
+        50% {top:35%;}
+        60% {top:33%;}
+        70% {top:35%;}
+        80% {top:33%;}
+        85% {top:35%;}
+        100% {top:47%;}
+    }
+}
+
+/**Tablet 768X481**/
+@media all and (max-width: 769px){
+    #pauseCharacter2  {
+        transform: scale(0.35);
+        top: 18%; left: -12%; margin-top: 6px; margin-left: 2px;
+    }
+
+    #pauseCharacter2:hover {
+        transform: scale(0.38);
+        cursor: pointer;
+    }
+
+    @keyframes charEarthquake {
+        0% {top:18%;}
+        10% {top:20%;}
+        20% {top:18%;}
+        30% {top:20%;}
+        40% {top:18%;}
+        50% {top:20%;}
+        60% {top:18%;}
+        70% {top:20%;}
+        80% {top:18%;}
+        85% {top:20%;}
+        100% {top:32%;}
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #pauseCharacter2  {
+        transform: scale(0.35);
+        top: 17%; left: -35%; margin-top: 4px; margin-left: 1px;
+    }
+
+    #pauseCharacter2:hover {
+        transform: scale(0.38);
+        cursor: pointer;
+    }
+
+    @keyframes charEarthquake {
+        0% {top:17%;}
+        10% {top:19%;}
+        20% {top:17%;}
+        30% {top:19%;}
+        40% {top:17%;}
+        50% {top:19%;}
+        60% {top:17%;}
+        70% {top:19%;}
+        80% {top:17%;}
+        85% {top:19%;}
+        100% {top:31%;}
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #pauseCharacter2  {
+        transform: scale(0.35);
+        top: 17%; left: -40%; margin-top: 4px; margin-left: 2px;
+    }
+
+    #pauseCharacter2:hover {
+        transform: scale(0.38);
+        cursor: pointer;
+    }
+
+    @keyframes charEarthquake {
+        0% {top:17%;}
+        10% {top:19%;}
+        20% {top:17%;}
+        30% {top:19%;}
+        40% {top:17%;}
+        50% {top:19%;}
+        60% {top:17%;}
+        70% {top:19%;}
+        80% {top:17%;}
+        85% {top:19%;}
+        100% {top:31%;}
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #pauseCharacter2  {
+        transform: scale(0.25);
+        top: 25%; left: -49%; margin-top: 0px; margin-left: 0px;
+    }
+
+    #pauseCharacter2:hover {
+        transform: scale(0.28);
+        cursor: pointer;
+    }
+
+    @keyframes charEarthquake {
+        0% {top:25%;}
+        10% {top:27%;}
+        20% {top:25%;}
+        30% {top:27%;}
+        40% {top:25%;}
+        50% {top:27%;}
+        60% {top:25%;}
+        70% {top:27%;}
+        80% {top:25%;}
+        85% {top:27%;}
+        100% {top:39%;}
+    }
+}
+
+#arrowBounce3 {
+    position: absolute;
+    z-index: 3;
+    background-image: url("arrow.png");
+    background-size: cover;
+    width: 83px;
+    height: 80px;
+    animation: bounce 2s infinite;
+    animation-play-state: running;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #arrowBounce3 {
+        width: 83px;
+        height: 80px;
+        top: 45%; left: 23%; margin-top: 0px; margin-left: 4px;
+    }
+}
+
+/**Desktop 1920x1080**/
+@media all and (max-width: 1921px){
+    #arrowBounce3 {
+        width: 53px;
+        height: 50px;
+        top: 46%; left: 24%; margin-top: 4px; margin-left: 0px;
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #arrowBounce3 {
+        width: 43px;
+        height: 40px;
+        top: 39%; left: 22%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #arrowBounce3 {
+        width: 27px;
+        height: 27px;
+        top: 47%; left: 21%; margin-top: 0px; margin-left: 10px;
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #arrowBounce3 {
+        width: 27px;
+        height: 27px;
+        top: 52%; left: 21%; margin-top: 0px; margin-left: 9px;
+    }
+}
+
+/**Tablet 가로 768X481**/
+@media all and (max-width: 769px){
+    #arrowBounce3 {
+        width: 23px;
+        height: 23px;
+        top: 47%; left: 19%; margin-top: 0px; margin-left: -5px;
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #arrowBounce3 {
+        width: 23px;
+        height: 23px;
+        top: 45%; left: 21%; margin-top: 0px; margin-left: -3px;
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #arrowBounce3 {
+        width: 23px;
+        height: 23px;
+        top: 45%; left: 23%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #arrowBounce3 {
+        width: 17px;
+        height: 17px;
+        top: 58%; left: 24%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+#ShockedBaby {
+    position: absolute;
+    z-index: 3;
+    background-image: url("ShockedBaby.png");
+    background-size: cover;
+    width: 302px;
+    height: 398px;
+}
+
+.ShockedBaby {
+    animation: ShockedBaby 1s linear 1;
+    animation-fill-mode: both;
+}
+
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #ShockedBaby {
+        transform: scale(1.1);
+        top: 57%; left: 7%; margin-top: 3px; margin-left: -1px;
+    }
+
+    @keyframes ShockedBaby {
+        0% {top:60%;}
+        100% {top:101%;}
+    }
+}
+
+/**Desktop 1920x1080**/
+@media all and (max-width: 1921px){
+    #ShockedBaby {
+        transform: scale(0.75);
+        top: 54%; left: 7%; margin-top: 4px; margin-left: -5px;
+    }
+
+    @keyframes ShockedBaby {
+        0% {top:54%;}
+        100% {top:95%;}
+    }
+}
+
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #ShockedBaby {
+        transform: scale(0.6);
+        top: 42%; left: 2%; margin-top: -1px; margin-left: -3px;
+    }
+
+    @keyframes ShockedBaby {
+        0% {top:42%;}
+        100% {top:90%;}
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #ShockedBaby {
+        transform: scale(0.4);
+        top: 36%; left: 3%; margin-top: 7px; margin-left: -6px;
+    }
+
+    @keyframes ShockedBaby {
+        0% {top:36%;}
+        100% {top:79%;}
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #ShockedBaby {
+        transform: scale(0.4);
+        top: 42%; left: -2%; margin-top: 6px; margin-left: -1px;
+    }
+
+    @keyframes ShockedBaby {
+        0% {top:42%;}
+        100% {top:81%;}
+    }
+}
+
+/**Tablet 가로 768X481**/
+@media all and (max-width: 769px){
+    #ShockedBaby {
+        transform: scale(0.35);
+        top: 31%; left: -12%; margin-top: 5px; margin-left: -1px;
+    }
+
+    @keyframes ShockedBaby {
+        0% {top:31%;}
+        100% {top:72%;}
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #ShockedBaby {
+        transform: scale(0.28);
+        top: 33%; left: -25%; margin-top: 0px; margin-left: -1px;
+    }
+
+    @keyframes ShockedBaby {
+        0% {top:33%;}
+        100% {top:70%;}
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #ShockedBaby {
+        transform: scale(0.28);
+        top: 33%; left: -25%; margin-top: 5px; margin-left: -1px;
+    }
+
+    @keyframes ShockedBaby {
+        0% {top:33%;}
+        100% {top:70%;}
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #ShockedBaby {
+        transform: scale(0.28);
+        top: 33%; left: -25%; margin-top: 5px; margin-left: -1px;
+    }
+
+    @keyframes ShockedBaby {
+        0% {top:33%;}
+        100% {top:70%;}
+    }
+}
+
+#ShockedChar {
+    position: absolute;
+    z-index: 3;
+    background-image: url("ShockedChar.png");
+    background-size: cover;
+    width: 356px;
+    height: 470px;
+}
+
+.ShockedChar {
+    animation: ShockedChar 1s linear 1;
+    animation-fill-mode: both;
+}
+
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #ShockedChar {
+        transform: scale(1.0);
+        top: 53%; left: 17%; margin-top: 1.9px; margin-left: -1px;
+    }
+
+    @keyframes ShockedChar {
+        0% {top:53%;}
+        100% {top: 100%;}
+    }
+}
+
+/**Desktop 1920x1080**/
+@media all and (max-width: 1921px){
+    #ShockedChar {
+        transform: scale(0.75);
+        top: 48%; left: 16%; margin-top: 1px; margin-left: 0px;
+    }
+
+    @keyframes ShockedChar {
+        0% {top:55%;}
+        100% {top:96%;}
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #ShockedChar {
+        transform: scale(0.6);
+        top: 34%; left:11%; margin-top: 2px; margin-left: -3px;
+    }
+
+    @keyframes ShockedChar {
+        0% {top:34%;}
+        100% {top:87%;}
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #ShockedChar {
+        transform: scale(0.4);
+        top: 28%; left: 9%; margin-top: 2px; margin-left: -1px;
+    }
+
+    @keyframes ShockedChar {
+        0% {top:28%;}
+        100% {top:75%;}
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #ShockedChar {
+        transform: scale(0.4);
+        top: 35%; left: 6%; margin-top: 0px; margin-left: -1px;
+    }
+
+    @keyframes ShockedChar {
+        0% {top:35%;}
+        100% {top:78%;}
+    }
+}
+
+/**Tablet 가로 768X481**/
+@media all and (max-width: 769px){
+    #ShockedChar {
+        transform: scale(0.35);
+        top: 44%; left: -3%; margin-top: 6px; margin-left: -3px;
+    }
+
+    .ShockedChar {
+        animation: ShockedChar 2s linear 1;
+        animation-fill-mode: both;
+    }
+
+
+    @keyframes ShockedBaby {
+        0% {top:44%;}
+        100% {top:67%;}
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #ShockedChar {
+        transform: scale(0.25);
+        top: 44%; left: -15%; margin-top: 5px; margin-left: -1px;
+    }
+
+    .ShockedChar {
+        animation: ShockedChar 2s linear 1;
+        animation-fill-mode: both;
+    }
+
+    @keyframes ShockedBaby {
+        0% {top:44%;}
+        100% {top:63%;}
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #ShockedChar {
+        transform: scale(0.25);
+        top: 44%; left: -15%; margin-top: 5px; margin-left: -1px;
+    }
+
+    .ShockedChar {
+        animation: ShockedChar 2s linear 1;
+        animation-fill-mode: both;
+    }
+
+    @keyframes ShockedBaby {
+        0% {top:44%;}
+        100% {top:63%;}
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #ShockedChar {
+        transform: scale(0.25);
+        top: 44%; left: -15%; margin-top: 5px; margin-left: -1px;
+    }
+
+    .ShockedChar {
+        animation: ShockedChar 2s linear 1;
+        animation-fill-mode: both;
+    }
+
+    @keyframes ShockedBaby {
+        0% {top:44%;}
+        100% {top:63%;}
+    }
+}
+
+#howtoplay2 {
+    position: absolute;
+    z-index: 3;
+    background-image: url("howtoplay2.png");
+    width: 580px;
+    height: 395px;
+    top:8%; left: 18%; margin-top: -10px; margin-left: 7px;
+    font-weight: 700;
+} 
+
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #howtoplay2 {
+        transform: scale(2.2);
+        top: 35%; left: 37%; margin-top: 0px; margin-left: -15px;
+    }
+}
+
+/**Desktop 1920x1080**/
+@media all and (max-width: 1921px){
+    #howtoplay2 {
+        transform: scale(1.6);
+        top: 32%; left: 35%; margin-top: 0px; margin-left: 10px;
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #howtoplay2 {
+        transform: scale(1.3);
+        top: 24%; left: 30%; margin-top: -3px; margin-left: -2px;
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #howtoplay2 {
+        transform: scale(1.0);
+        top: 15%; left: 26%; margin-top: 0px; margin-left: 3px;
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #howtoplay2 {
+        transform: scale(1.0);
+        top: 16%; left: 22%; margin-top: 10px; margin-left: -5px;
+    }
+}
+
+#howtoplay3 {
+    position: absolute;
+    z-index: 3;
+    background-image: url("howtoplay2-2.png");
+    width: 580px;
+    height: 395px;
+    top:8%; left: 18%; margin-top: -10px; margin-left: 7px;
+    font-weight: 700;
+} 
+
+/**Tablet 768X481**/
+@media all and (max-width: 769px){
+    #howtoplay3 {
+        transform: scale(0.7);
+        top: 9%; left: 14%; margin-top: 0px; margin-left: -10px;
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #howtoplay3 {
+        transform: scale(0.6);
+        top: 9%; left: -18%; margin-top: 0px; margin-left: 4px;
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #howtoplay3 {
+        transform: scale(0.6);
+        top: 9%; left: -26%; margin-top: 0px; margin-left: -3px;
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #howtoplay3 {
+        transform: scale(0.5);
+        top: 9%; left: -39%; margin-top: 0px; margin-left: -3px;
+    }
+}
+
+#goBtn2 {
+    position: absolute;
+    z-index: 10;
+    top: 35%; left: 35%; margin-top: 5px; margin-left: 0px;
+    font-family: "My Font";
+    transform: translateX(-50%);
+    color: #ea0054;
+    cursor: pointer;
+}
+
+/**4K 2690X1376**/
+@media all and /**(min-width:1921px) and**/ (max-width: 2691px) {
+    #goBtn2 {
+        width: 200px;
+        height: 90px;
+        font-size:7em;
+        font-weight: 700;
+        top: 67%; left: 49%; margin-top: 0px; margin-left: -3px;
+    }
+}
+
+/**Desktop 1920x1080**/
+@media (max-width: 1921px) {
+    #goBtn2 {
+        width: 200px;
+        height: 90px;
+        font-size:5em;
+        font-weight: 700;
+        top: 67%; left: 54%; margin-top: 0px; margin-left: -2px;
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #goBtn2 {
+        font-size:4em;
+        font-weight: 700;
+        top: 68%; left: 54%; margin-top: 15px; margin-left: 10px;
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #goBtn2 {
+        font-size:2.8em;
+        font-weight: 700;
+        top: 69%; left: 55%; margin-top: -2px; margin-left: -5px;
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #goBtn2 {
+        font-size:2.8em;
+        font-weight: 700;
+        top: 65%; left: 56%; margin-top: 3px; margin-left: 7px;
+    }
+}
+
+/**Tablet 가로 768X481**/
+@media all and (max-width: 769px){
+    #goBtn2 {
+        font-size:2.0em;
+        font-weight: 600;
+        top: 66%; left: 61%; margin-top: 3px; margin-left: -3px;
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #goBtn2 {
+        font-size:1.7em;
+        font-weight: 600;
+        top: 64%; left: 69%; margin-top: 0px; margin-left: 6px;
+    }
+}
+
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #goBtn2 {
+        font-size:1.7em;
+        font-weight: 600;
+        top: 64%; left: 72%; margin-top: 0px; margin-left: 2px;
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #goBtn2 {
+        font-size:1.5em;
+        font-weight: 600;
+        top: 62%; left: 76%; margin-top: 0px; margin-left: 3px;
+    }
+}
+
+#goBtn2:hover {
+    color: hsl(243, 80%, 62%);
+    cursor: pointer;
+}
+
+#sand {
+    position: absolute;
+    z-index: 2;
+    background-image: url("sand.png");
+    width: 1920px;
+    height: 212px;
+}
+
+/**4K 2690X1376**/
+@media all and /**(min-width:1921px) and**/ (max-width: 2691px) {
+    #sand {
+        transform: scale(1.4);
+        top: 81%; left: 14%; margin-top: 6px; margin-left: 8px;
+    }
+}
+
+/**Desktop 1920x1080**/
+@media (max-width: 1921px) {
+    #sand {
+        transform: scale(1.0);
+        top: 80%; left: 0%; margin-top: 2px; margin-left: 0px;
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #sand {
+        transform: scale(0.75);
+        top: 74%; left: -17%; margin-top: 6px; margin-left: 5px;
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #sand {
+        transform: scale(0.68);
+        top: 69%; left: -25%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #sand {
+        transform: scale(0.54);
+        top: 74%; left: -44%; margin-top: 2px; margin-left: 0px;
+    }
+}
+
+/**Tablet 가로 768X481**/
+@media all and (max-width: 769px){
+    #sand {
+        transform: scale(0.40);
+        top: 69%; left: -75%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #sand {
+        transform: scale(0.225);
+        top: 73%; left: -175%; margin-top: 0px; margin-left: -4px;
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #sand {
+        transform: scale(0.1958);
+        top: 73%; left: -205%; margin-top: 3px; margin-left: -3px;
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #sand {
+        transform: scale(0.17);
+        top: 74%; left: -249%; margin-top: 2px; margin-left: -3px;
+    }
+}
+
+#swimchar {
+    position: absolute;
+    z-index: 3;
+    background-image: url("swim.gif");
+    width: 500px;
+    height: 355px;
+}
+
+.swim {
+    animation: swim 1s ease;
+}
+
+/**4K 2690X1376**/
+@media all and /**(min-width:1921px) and**/ (max-width: 2691px) {
+    #swimchar {
+        transform: scale(1.0);
+        top: 26%; left: 5%; margin-top: 2px; margin-left: 0px;
+    }
+    
+    @keyframes swim {
+        0% {top: 26%}
+        20% {top: 24%}
+        50% {top: 10%;}
+        80% {top: 8%;}
+        95% {top: 24%}
+        100% {top: 26%}
+    }
+}
+/**Desktop 1920x1080**/
+@media (max-width: 1921px) {
+    #swimchar {
+        transform: scale(0.8);
+        top: 26%; left: 5%; margin-top: 2px; margin-left: 0px;
+    }
+    
+    @keyframes swim {
+        0% {top: 26%}
+        20% {top: 24%}
+        50% {top: 10%;}
+        80% {top: 8%;}
+        95% {top: 24%}
+        100% {top: 26%}
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #swimchar {
+        transform: scale(0.5);
+        top: 26%; left: -5%; margin-top: 2px; margin-left: 0px;
+    }
+    
+    @keyframes swim {
+        0% {top: 26%}
+        20% {top: 24%}
+        50% {top: 10%;}
+        80% {top: 8%;}
+        95% {top: 24%}
+        100% {top: 26%}
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #swimchar {
+        transform: scale(0.37);
+        top: 26%; left: -5%; margin-top: 2px; margin-left: 0px;
+    }
+    
+    @keyframes swim {
+        0% {top: 26%}
+        20% {top: 24%}
+        50% {top: 10%;}
+        80% {top: 8%;}
+        95% {top: 24%}
+        100% {top: 26%}
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #swimchar {
+        transform: scale(0.37);
+        top: 26%; left: -5%; margin-top: 2px; margin-left: 0px;
+    }
+    
+    @keyframes swim {
+        0% {top: 26%}
+        20% {top: 24%}
+        50% {top: 10%;}
+        80% {top: 8%;}
+        95% {top: 24%}
+        100% {top: 26%}
+    }
+}
+
+/**Tablet 가로 768X481**/
+@media all and (max-width: 769px){
+    #swimchar {
+        transform: scale(0.32);
+        top: 16%; left: -15%; margin-top: 2px; margin-left: 0px;
+    }
+    
+    @keyframes swim {
+        0% {top: 16%}
+        20% {top: 14%}
+        50% {top: 0%;}
+        80% {top: -2%;}
+        95% {top: 14%}
+        100% {top: 16%}
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #swimchar {
+        transform: scale(0.26);
+        top: 16%; left: -41%; margin-top: 2px; margin-left: 0px;
+    }
+    
+    @keyframes swim {
+        0% {top: 16%}
+        20% {top: 14%}
+        50% {top: 0%;}
+        80% {top: -2%;}
+        95% {top: 14%}
+        100% {top: 16%}
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #swimchar {
+        transform: scale(0.25);
+        top: 16%; left: -47%; margin-top: 2px; margin-left: 0px;
+    }
+    
+    @keyframes swim {
+        0% {top: 16%}
+        20% {top: 14%}
+        50% {top: 0%;}
+        80% {top: -2%;}
+        95% {top: 14%}
+        100% {top: 16%}
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #swimchar {
+        transform: scale(0.23);
+        top: 16%; left: -58%; margin-top: 2px; margin-left: 0px;
+    }
+    
+    @keyframes swim {
+        0% {top: 16%}
+        20% {top: 14%}
+        50% {top: 0%;}
+        80% {top: -2%;}
+        95% {top: 14%}
+        100% {top: 16%}
+    }
+}
+
+#shark {
+    position: absolute;
+    z-index: 3;
+    background-image: url("shark.gif");
+    width: 380px;
+    height: 180px;
+}
+
+.shark {
+    animation: shark 2s linear infinite;
+    animation-fill-mode: both;
+}
+
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #shark {
+        transform: scale(1.2);
+        top: 33%; left: 50%; margin-top: 2px; margin-left: 0px;
+    }
+
+    @keyframes shark {
+        0% {left: 100%;}
+        100% {left: -10%;}
+    }
+}
+
+/**Desktop 1920x1080**/
+@media (max-width: 1921px) {
+    #shark {
+        transform: scale(1.0);
+        top: 33%; left: 50%; margin-top: 2px; margin-left: 0px;
+    }
+
+    @keyframes shark {
+        0% {left: 100%;}
+        100% {left: -10%;}
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #shark {
+        transform: scale(0.7);
+        top: 38%; left: 47%; margin-top: 2px; margin-left: 0px;
+    } 
+
+    @keyframes shark {
+        0% {left: 96%;}
+        100% {left: -8%;}
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #shark {
+        transform: scale(0.5);
+        top: 40%; left: 40%; margin-top: 2px; margin-left: 0px;
+    }
+
+    @keyframes shark {
+        0% {left: 93%;}
+        100% {left: -10%;}
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #shark {
+        transform: scale(0.5);
+        top: 40%; left: 40%; margin-top: 2px; margin-left: 0px;
+    }
+
+    @keyframes shark {
+        0% {left: 91%;}
+        100% {left: -10%;}
+    }
+}
+
+/**Tablet 가로 768X481**/
+@media all and (max-width: 769px){
+    #shark {
+        transform: scale(0.4);
+        top: 32%; left: 40%; margin-top: 2px; margin-left: 0px;
+    } /**left: 40%;**/
+
+    @keyframes shark {
+        0% {left: 85%;}
+        100% {left: -10%;}
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #shark {
+        transform: scale(0.34);
+        top: 32%; left: 35%; margin-top: 2px; margin-left: 0px;
+    }
+
+    @keyframes shark {
+        0% {left: 70%;}
+        100% {left: -60%;}
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #shark {
+        transform: scale(0.32);
+        top: 32%; left: 35%; margin-top: 2px; margin-left: 0px;
+    }
+
+    @keyframes shark {
+        0% {left: 70%;}
+        100% {left: -64%;}
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #shark {
+        transform: scale(0.30);
+        top: 32%; left: 20%; margin-top: 2px; margin-left: 0px;
+    }
+
+    @keyframes shark {
+        0% {left: 58%;}
+        100% {left: -68%;}
+    }
+}
+
+#fish {
+    position: absolute;
+    z-index: 1;
+    background-image: url("fish.png");
+    width: 387px;
+    height: 330px;
+    animation: fish 12s linear infinite;
+    animation-fill-mode: both;
+}
+
+/**4K 2690X1376**/
+@media all and /**(min-width:1921px) and**/ (max-width: 2691px) {
+    #fish {
+        transform: scale(1.0);
+        top: 20%; left: 98%; margin-top: 2px; margin-left: 0px;
+    }
+
+   @keyframes fish {
+        0% {left: -21%;}
+        100% {left: 98%;}
+    }
+}
+
+/**Desktop 1920x1080**/
+@media (max-width: 1921px) {
+    #fish {
+        transform: scale(0.8);
+        top: 20%; left: 98%; margin-top: 2px; margin-left: 0px;
+    }
+
+   @keyframes fish {
+        0% {left: -21%;}
+        100% {left: 98%;}
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #fish {
+        transform: scale(0.6);
+        top: 8%; left: 95%; margin-top: 2px; margin-left: 0px;
+    }
+
+    @keyframes fish {
+        0% {left: -21%;}
+        100% {left: 95%;}
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #fish {
+        transform: scale(0.4);
+        top: 3%; left: 40%; margin-top: 2px; margin-left: 0px;
+    }
+
+    @keyframes fish {
+        0% {left: -21%;}
+        100% {left: 91%;}
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #fish {
+        transform: scale(0.4);
+        top: 3%; left: 40%; margin-top: 2px; margin-left: 0px;
+    }
+
+    @keyframes fish {
+        0% {left: -21%;}
+        100% {left: 91%;}
+    }
+}
+
+/**Tablet 가로 768X481**/
+@media all and (max-width: 769px){
+    #fish {
+        transform: scale(0.3);
+        top: 3%; left: 40%; margin-top: 2px; margin-left: 0px;
+    }
+
+    @keyframes fish {
+        0% {left: -21%;}
+        100% {left: 91%;}
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #fish {
+        animation: fish 7s linear infinite;
+        animation-fill-mode: both;
+        transform: scale(0.24);
+        top: 3%; left: 40%; margin-top: 2px; margin-left: 0px;
+    }
+
+    @keyframes fish {
+        0% {left: -51%;}
+        100% {left: 71%;}
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #fish {
+        animation: fish 7s linear infinite;
+        animation-fill-mode: both;
+        transform: scale(0.24);
+        top: 3%; left: 40%; margin-top: 2px; margin-left: 0px;
+    }
+
+    @keyframes fish {
+        0% {left: -51%;}
+        100% {left: 71%;}
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #fish {
+        animation: fish 7s linear infinite;
+        animation-fill-mode: both;
+        transform: scale(0.22);
+        top: 3%; left: 40%; margin-top: 2px; margin-left: 0px;
+    }
+
+    @keyframes fish {
+        0% {left: -51%;}
+        100% {left: 71%;}
+    }
+}
+
+#seaweed {
+    position: absolute;
+    z-index: 1;
+    background-image: url("seaweed.gif");
+    width: 255px;
+    height: 368px;
+}
+
+/**4K 2690X1376**/
+@media all and /**(min-width:1921px) and**/ (max-width: 2691px) {
+    #seaweed {
+        transform: scale(1.0);
+        top: 63%; left: 85%; margin-top: 7px; margin-left: 0px;
+    }
+}
+
+/**Desktop 1920x1080**/
+@media (max-width: 1921px) {
+    #seaweed {
+        transform: scale(0.8);
+        top: 60%; left: 84%; margin-top: -3px; margin-left: 9px;
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #seaweed {
+        transform: scale(0.6);
+        top: 50%; left: 80%; margin-top: 5px; margin-left: 5px;
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #seaweed {
+        transform: scale(0.4);
+        top: 45%; left: 80%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #seaweed {
+        transform: scale(0.38);
+        top: 52%; left: 77%; margin-top: 2px; margin-left: 2px;
+    }
+}
+
+/**Tablet 가로 768X481**/
+@media all and (max-width: 769px){
+    #seaweed {
+        transform: scale(0.30);
+        top: 42%; left: 74%; margin-top: 2px; margin-left: -8px;
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #seaweed {
+        transform: scale(0.25);
+        top: 48%; left: 60%; margin-top: 1px; margin-left: 6px;
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #seaweed {
+        transform: scale(0.21);
+        top: 49%; left: 58%; margin-top: 2px; margin-left: 0px;
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #seaweed {
+        transform: scale(0.19);
+        top: 51%; left: 52%; margin-top: 2px; margin-left: 0px;
+    }
+}
+
+#coral {
+    position: absolute;
+    z-index: 1;
+    background-image: url("coral.png");
+    width: 287px;
+    height: 361px;
+}
+
+/**4K 2690X1376**/
+@media all and /**(min-width:1921px) and**/ (max-width: 2691px) {
+    #coral {
+        transform: scale(1.0);
+        top: 59%; left:7%; margin-top: -3px; margin-left: -10px;
+    }
+}
+
+/**Desktop 1920x1080**/
+@media (max-width: 1921px) {
+    #coral {
+        transform: scale(0.8);
+        top: 56%; left: 4%; margin-top: 2px; margin-left: 0px;
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #coral {
+        transform: scale(0.6);
+        top: 47%; left: 2%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #coral {
+        transform: scale(0.4);
+        top: 41%; left: 0%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #coral {
+        transform: scale(0.38);
+        top: 48%; left: -3%; margin-top: 3px; margin-left: 0px;
+    }
+}
+
+/**Tablet 가로 768X481**/
+@media all and (max-width: 769px){
+    #coral {
+        transform: scale(0.30);
+        top: 39%; left: -7%; margin-top: 0px; margin-left: -2px;
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #coral {
+        transform: scale(0.25);
+        top: 46%; left: -22%; margin-top: 1px; margin-left: -5px;
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #coral {
+        transform: scale(0.21);
+        top: 49%; left: -27%; margin-top: -2px; margin-left: 0px;
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #coral {
+        transform: scale(0.19);
+        top: 51%; left: -34%; margin-top: -2px; margin-left: 0px;
+    }
+}
+
+#babyBubble{
+    position: absolute;
+    z-index: 10;
+    background-image: url("BabyBubble.png");
+    width: 325px;
+    height: 337px;
+}
+
+.babyBubble{
+    animation: babyBubble 4s linear 1;
+    animation-delay: 10s;
+    animation-fill-mode: both;
+}
+
+/**4K 2690X1376**/
+@media all and /**(min-width:1921px) and**/ (max-width: 2691px) {
+    #babyBubble {
+        transform: scale(0.8);
+        top: 40%; left: 47%; margin-top: 0px; margin-left: 0px;
+    }
+
+    #babyBubble:hover {
+        transform: scale(0.83);
+        cursor: pointer;
+    }
+
+    @keyframes babyBubble {
+        0% {top: 97%;}
+        100% {top: -34%;}
+    }
+}
+
+/**Desktop 1920x1080**/
+@media (max-width: 1921px) {
+    #babyBubble {
+        transform: scale(0.6);
+        top: 40%; left: 47%; margin-top: 0px; margin-left: 0px;
+    }
+
+    #babyBubble:hover {
+        transform: scale(0.63);
+        cursor: pointer;
+    }
+
+    @keyframes babyBubble {
+        0% {top: 93%;}
+        100% {top: -34%;}
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #babyBubble {
+        transform: scale(0.4);
+        top: 40%; left: 47%; margin-top: 0px; margin-left: 0px;
+    }
+
+    #babyBubble:hover {
+        transform: scale(0.53);
+        cursor: pointer;
+    }
+
+    @keyframes babyBubble {
+        0% {top: 87%;}
+        100% {top: -34%;}
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #babyBubble {
+        transform: scale(0.3);
+        top: 40%; left: 43%; margin-top: 0px; margin-left: 0px;
+    }
+
+    #babyBubble:hover {
+        transform: scale(0.33);
+        cursor: pointer;
+    }
+
+    @keyframes babyBubble {
+        0% {top: 78%;}
+        100% {top: -37%;}
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #babyBubble {
+        transform: scale(0.3);
+        top: 40%; left: 43%; margin-top: 0px; margin-left: 0px;
+    }
+
+    #babyBubble:hover {
+        transform: scale(0.33);
+        cursor: pointer;
+    }
+
+    @keyframes babyBubble {
+        0% {top: 85%;}
+        100% {top: -37%;}
+    }
+}
+
+/**Tablet 가로 768X481**/
+@media all and (max-width: 769px){
+    #babyBubble {
+        transform: scale(0.25);
+        top: 40%; left: 37%; margin-top: -31px; margin-left: 0px;
+    }
+
+    #babyBubble:hover {
+        transform: scale(0.28);
+        cursor: pointer;
+    }
+
+    @keyframes babyBubble {
+        0% {top: 85%;}
+        100% {top: -37%;}
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #babyBubble {
+        transform: scale(0.16);
+        top: 37%; left: 27%; margin-top: -17px; margin-left: 0px;
+    }
+
+    #babyBubble:hover {
+        transform: scale(0.19);
+        cursor: pointer;
+    }
+
+    @keyframes babyBubble {
+        0% {top: 100%;}
+        100% {top: -37%;}
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #babyBubble {
+        transform: scale(0.16);
+        top: 37%; left: 22%; margin-top: -17px; margin-left: 0px;
+    }
+
+    #babyBubble:hover {
+        transform: scale(0.19);
+        cursor: pointer;
+    }
+
+    @keyframes babyBubble {
+        0% {top: 102%;}
+        100% {top: -37%;}
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #babyBubble {
+        transform: scale(0.16);
+        top: 37%; left: 19%; margin-top: -17px; margin-left: 0px;
+    }
+
+    #babyBubble:hover {
+        transform: scale(0.19);
+        cursor: pointer;
+    }
+
+    @keyframes babyBubble {
+        0% {top: 102%;}
+        100% {top: -37%;}
+    }
+}
+
+#up{
+    position: absolute;
+    z-index: 10;
+    background-image: url("up.png");
+    width: 325px;
+    height: 337px;
+}
+
+.up{
+    animation: up 4s linear 1;
+    animation-delay: 4s;
+    animation-fill-mode: both;
+}
+
+/**4K 2690X1376**/
+@media all and /**(min-width:1921px) and**/ (max-width: 2691px) {
+    #up {
+        transform: scale(0.8);
+        top: 40%; left: 23%; margin-top: 0px; margin-left: 0px;
+    }
+
+    #up:hover {
+        transform: scale(0.83);
+        cursor: pointer;
+    }
+
+    @keyframes up {
+        0% {top: 97%;}
+        100% {top: -34%;}
+    }
+}
+
+/**Desktop 1920x1080**/
+@media (max-width: 1921px) {
+    #up {
+        transform: scale(0.6);
+        top: 40%; left: 23%; margin-top: 0px; margin-left: 0px;
+    }
+
+    #up:hover {
+        transform: scale(0.63);
+        cursor: pointer;
+    }
+
+    @keyframes up {
+        0% {top: 93%;}
+        100% {top: -34%;}
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #up {
+        transform: scale(0.4);
+        top: 40%; left: 23%; margin-top: 0px; margin-left: 0px;
+    }
+
+    #up:hover {
+        transform: scale(0.53);
+        cursor: pointer;
+    }
+
+    @keyframes up {
+        0% {top: 87%;}
+        100% {top: -34%;}
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #up {
+        transform: scale(0.3);
+        top: 40%; left: 19%; margin-top: 0px; margin-left: 0px;
+    }
+
+    #up:hover {
+        transform: scale(0.33);
+        cursor: pointer;
+    }
+
+    @keyframes up {
+        0% {top: 78%;}
+        100% {top: -37%;}
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #up {
+        transform: scale(0.3);
+        top: 40%; left: 19%; margin-top: 0px; margin-left: 0px;
+    }
+
+    #up:hover {
+        transform: scale(0.33);
+        cursor: pointer;
+    }
+
+    @keyframes up {
+        0% {top: 85%;}
+        100% {top: -37%;}
+    }
+}
+
+/**Tablet 가로 768X481**/
+@media all and (max-width: 769px){
+    #up {
+        transform: scale(0.25);
+        top: 40%; left: 13%; margin-top: -31px; margin-left: 0px;
+    }
+
+    #up:hover {
+        transform: scale(0.28);
+        cursor: pointer;
+    }
+
+    @keyframes up {
+        0% {top: 85%;}
+        100% {top: -37%;}
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #up {
+        transform: scale(0.16);
+        top: 37%; left: 3%; margin-top: -17px; margin-left: 0px;
+    }
+
+    #up:hover {
+        transform: scale(0.19);
+        cursor: pointer;
+    }
+
+    @keyframes up {
+        0% {top: 100%;}
+        100% {top: -37%;}
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #up {
+        transform: scale(0.16);
+        top: 40%; left: -2%; margin-top: -17px; margin-left: 0px;
+    }
+
+    #up:hover {
+        transform: scale(0.19);
+        cursor: pointer;
+    }
+
+    @keyframes up {
+        0% {top: 102%;}
+        100% {top: -37%;}
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #up {
+        transform: scale(0.16);
+        top: 37%; left: -5%; margin-top: -17px; margin-left: 0px;
+    }
+
+    #up:hover {
+        transform: scale(0.19);
+        cursor: pointer;
+    }
+
+    @keyframes up {
+        0% {top: 102%;}
+        100% {top: -37%;}
+    }
+}
+
+#right{
+    position: absolute;
+    z-index: 10;
+    background-image: url("right.png");
+    width: 325px;
+    height: 337px;
+}
+
+.right{
+    animation: right 6s linear 1;
+    animation-delay: 4s;
+    animation-fill-mode: both;
+}
+
+/**4K 2690X1376**/
+@media all and /**(min-width:1921px) and**/ (max-width: 2691px) {
+    #right {
+        transform: scale(0.8);
+        top: 40%; left: 35%; margin-top: 0px; margin-left: 0px;
+    }
+
+    #right:hover {
+        transform: scale(0.83);
+        cursor: pointer;
+    }
+
+    @keyframes right {
+        0% {top: 97%;}
+        100% {top: -34%;}
+    }
+}
+
+/**Desktop 1920x1080**/
+@media (max-width: 1921px) {
+    #right {
+        transform: scale(0.6);
+        top: 40%; left: 35%; margin-top: 0px; margin-left: 0px;
+    }
+
+    #right:hover {
+        transform: scale(0.63);
+        cursor: pointer;
+    }
+
+    @keyframes right {
+        0% {top: 93%;}
+        100% {top: -34%;}
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #right {
+        transform: scale(0.4);
+        top: 40%; left: 35%; margin-top: 0px; margin-left: 0px;
+    }
+
+    #right:hover {
+        transform: scale(0.53);
+        cursor: pointer;
+    }
+
+    @keyframes right {
+        0% {top: 87%;}
+        100% {top: -34%;}
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #right {
+        transform: scale(0.3);
+        top: 40%; left: 31%; margin-top: 0px; margin-left: 0px;
+    }
+
+    #right:hover {
+        transform: scale(0.33);
+        cursor: pointer;
+    }
+
+    @keyframes right {
+        0% {top: 78%;}
+        100% {top: -37%;}
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #right {
+        transform: scale(0.3);
+        top: 40%; left: 31%; margin-top: 0px; margin-left: 0px;
+    }
+
+    #right:hover {
+        transform: scale(0.33);
+        cursor: pointer;
+    }
+
+    @keyframes right {
+        0% {top: 85%;}
+        100% {top: -37%;}
+    }
+}
+
+/**Tablet 가로 768X481**/
+@media all and (max-width: 769px){
+    #right {
+        transform: scale(0.25);
+        top: 40%; left: 25%; margin-top: -31px; margin-left: 0px;
+    }
+
+    #right:hover {
+        transform: scale(0.28);
+        cursor: pointer;
+    }
+
+    @keyframes right {
+        0% {top: 85%;}
+        100% {top: -37%;}
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #right {
+        transform: scale(0.16);
+        top: 40%; left: 15%; margin-top: -17px; margin-left: 0px;
+    }
+
+    #right:hover {
+        transform: scale(0.19);
+        cursor: pointer;
+    }
+
+    @keyframes right {
+        0% {top: 100%;}
+        100% {top: -37%;}
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #right {
+        transform: scale(0.16);
+        top: 40%; left: 10%; margin-top: -17px; margin-left: 0px;
+    }
+
+    #right:hover {
+        transform: scale(0.19);
+        cursor: pointer;
+    }
+
+    .right{
+        animation: right 7s linear 1;
+        animation-delay: 4s;
+        animation-fill-mode: both;
+    }
+
+    @keyframes right {
+        0% {top: 102%;}
+        100% {top: -37%;}
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #right {
+        transform: scale(0.16);
+        top: 40%; left: 7%; margin-top: -17px; margin-left: 0px;
+    }
+
+    #right:hover {
+        transform: scale(0.19);
+        cursor: pointer;
+    }
+
+    .right{
+        animation: right 7s linear 1;
+        animation-delay: 4s;
+        animation-fill-mode: both;
+    }
+
+    @keyframes right {
+        0% {top: 102%;}
+        100% {top: -37%;}
+    }
+}
+
+#down{
+    position: absolute;
+    z-index: 10;
+    background-image: url("down.png");
+    width: 325px;
+    height: 337px;
+}
+
+.down{
+    animation: down 4s linear 1;
+    animation-delay: 8s;
+    animation-fill-mode: both;
+}
+
+/**4K 2690X1376**/
+@media all and /**(min-width:1921px) and**/ (max-width: 2691px) {
+    #down {
+        transform: scale(0.8);
+        top: 40%; left: 59%; margin-top: 0px; margin-left: 0px;
+    }
+
+    #down:hover {
+        transform: scale(0.83);
+        cursor: pointer;
+    }
+
+    @keyframes down {
+        0% {top: 97%;}
+        100% {top: -34%;}
+    }
+}
+
+/**Desktop 1920x1080**/
+@media (max-width: 1921px) {
+    #down {
+        transform: scale(0.6);
+        top: 40%; left: 59%; margin-top: 0px; margin-left: 0px;
+    }
+
+    #down:hover {
+        transform: scale(0.63);
+        cursor: pointer;
+    }
+
+    @keyframes down {
+        0% {top: 93%;}
+        100% {top: -34%;}
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #down {
+        transform: scale(0.4);
+        top: 40%; left: 59%; margin-top: 0px; margin-left: 0px;
+    }
+
+    #down:hover {
+        transform: scale(0.53);
+        cursor: pointer;
+    }
+
+    @keyframes down {
+        0% {top: 87%;}
+        100% {top: -34%;}
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #down {
+        transform: scale(0.3);
+        top: 40%; left: 55%; margin-top: 0px; margin-left: 0px;
+    }
+
+    #down:hover {
+        transform: scale(0.33);
+        cursor: pointer;
+    }
+
+    @keyframes down {
+        0% {top: 78%;}
+        100% {top: -37%;}
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #down {
+        transform: scale(0.3);
+        top: 40%; left: 55%; margin-top: 0px; margin-left: 0px;
+    }
+
+    #down:hover {
+        transform: scale(0.33);
+        cursor: pointer;
+    }
+
+    @keyframes down {
+        0% {top: 85%;}
+        100% {top: -37%;}
+    }
+}
+
+/**Tablet 가로 768X481**/
+@media all and (max-width: 769px){
+    #down {
+        transform: scale(0.25);
+        top: 40%; left: 49%; margin-top: -31px; margin-left: 0px;
+    }
+
+    #down:hover {
+        transform: scale(0.28);
+        cursor: pointer;
+    }
+
+    @keyframes down {
+        0% {top: 85%;}
+        100% {top: -37%;}
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #down {
+        transform: scale(0.16);
+        top: 40%; left: 39%; margin-top: -17px; margin-left: 0px;
+    }
+
+    #down:hover {
+        transform: scale(0.19);
+        cursor: pointer;
+    }
+
+    @keyframes down {
+        0% {top: 100%;}
+        100% {top: -37%;}
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #down {
+        transform: scale(0.16);
+        top: 40%; left: 34%; margin-top: -17px; margin-left: 0px;
+    }
+
+    #down:hover {
+        transform: scale(0.19);
+        cursor: pointer;
+    }
+
+    @keyframes down {
+        0% {top: 102%;}
+        100% {top: -37%;}
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #down {
+        transform: scale(0.16);
+        top: 40%; left: 31%; margin-top: -17px; margin-left: 0px;
+    }
+
+    #down:hover {
+        transform: scale(0.19);
+        cursor: pointer;
+    }
+
+    @keyframes down {
+        0% {top: 102%;}
+        100% {top: -37%;}
+    }
+}
+
+#replayBtn2 {
+    position: absolute;
+    z-index: 10;
+    font-family: "My Font";
+    transform: translateX(-50%);
+    color: #ea0054;
+}
+
+#replayBtn2:hover {
+    color: hsl(243, 80%, 62%);
+    cursor: pointer;
+}
+
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #replayBtn2   {
+        font-size:6.3em;
+        font-weight: 800;
+        top: 48%; left: 48%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**Desktop 1920x1080**/
+@media all and (max-width: 1921px){
+    #replayBtn2   {
+        font-size:5em;
+        font-weight: 800;
+        top: 48%; left: 50%; margin-top: 0px; margin-left: 2px;
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #replayBtn2   {
+        font-size:3.6em;
+        font-weight: 800;
+        top: 48%; left: 50%; margin-top: 0px; margin-left: -4px;
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #replayBtn2   {
+        font-size:3em;
+        font-weight: 800;
+        top: 47%; left: 50%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #replayBtn2   {
+        font-size:3em;
+        font-weight: 800;
+        top: 46%; left: 51%; margin-top: 3px; margin-left: -6px;
+    }
+}
+
+/**Tablet 768X481**/
+@media all and (max-width: 769px){
+    #replayBtn2   {
+        font-size:2.2em;
+        font-weight: 800;
+        top: 46%; left: 50%; margin-top: 0px; margin-left: -2px;
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #replayBtn2   {
+        font-size:1.8em;
+        font-weight: 800;
+        top: 43%; left: 49%; margin-top: 2px; margin-left: 0px;
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #replayBtn2   {
+        font-size:1.8em;
+        font-weight: 800;
+        top: 47%; left: 50%; margin-top: 2px; margin-left: -3px;
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #replayBtn2   {
+        font-size:1.5em;
+        font-weight: 800;
+        top: 46%; left: 50%; margin-top: 0px; margin-left: 1px;
+    }
+}
+
+#gameover2 {
+    position: absolute;
+    z-index: 10;
+    top:21%; left:26%; margin-top: 0px; margin-left: 5px;
+    font-family: "My Font";
+    font-size: 4em;  
+    font-weight: bolder;
+    animation: twinkle 0.5s linear 2;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #gameover2  {
+        font-size: 9em;
+        top: 39%; left: 36%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**Desktop 1920x1080**/
+@media all and (max-width: 1921px){
+    #gameover2  {
+        font-size: 7em;
+        top: 39%; left: 37%; margin-top: 0px; margin-left: 2px;
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #gameover2  {
+        font-size: 5em;
+        top: 39%; left: 37%; margin-top: 0px; margin-left: 5px;
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #gameover2  {
+        font-size: 4em;
+        top: 38%; left: 39%; margin-top: 0px; margin-left: -1px;
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #gameover2  {
+        font-size: 4em;
+        top: 38%; left: 37%; margin-top: 0px; margin-left: -3px;
+    }
+}
+
+/**Tablet 768X481**/
+@media all and (max-width: 769px){
+    #gameover2  {
+        font-size: 3.5em;
+        top: 36%; left: 33%; margin-top: 0px; margin-left: 4px;
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #gameover2  {
+        font-size: 2.5em;
+        top: 36%; left: 28%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #gameover2  {
+        font-size: 2.5em;
+        top: 40%; left: 25%; margin-top: 0px; margin-left: 2px;
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #gameover2  {
+        font-size: 2em;
+        top: 40%; left: 25%; margin-top: 0px; margin-left: 8.5px;
+    }
+}
+
+#jumpNum2 {
+    position: absolute;
+    z-index: 3;
+    width: 300px;
+    height: 90px;
+    top: 6%; left: 3%;
+    font-family: "My Font";
+    font-weight: bolder;
+}
+
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #jumpNum2 {
+        font-size:3.5em;
+        font-weight: 700;
+    }
+}
+
+/**Desktop 1920x1080**/
+@media (max-width: 1921px) {
+    #jumpNum2 {
+        font-size:3.0em;
+        font-weight: 700;}
+    }
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #jumpNum2 {
+        font-size:2.5em;
+        font-weight: 700;
+}
+    }
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #jumpNum2 {
+        font-size:1.8em;
+        font-weight: 700;
+}
+    }
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #jumpNum2 {
+        font-size:1.8em;
+        font-weight: 700;
+}
+    }
+
+
+/**Tablet 가로 768X481**/
+@media all and (max-width: 769px){
+    #jumpNum2 {
+        font-size:1.3em;
+        font-weight: 700;
+}
+    }
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #jumpNum2 {
+        font-size:1.0em;
+        font-weight: 700;
+}
+    }
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #jumpNum2 {
+        font-size:1.0em;
+        font-weight: 700;
+}
+    }
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #jumpNum2 {
+        font-size:1.0em;
+        font-weight: 700;
+}
+    }
+
+    #jumpPad2 {
+        position: absolute;
+        z-index: 6;
+        background-color: none;
+        width: 2560px;
+        height: 1381px;
+        top: 0%; left: 0%; margin-top: 0px; margin-left: 0px;
+    }
+
+    #gameclear {
+        position: absolute;
+        z-index: 10;
+        top:21%; left:26%; margin-top: 0px; margin-left: 5px;
+        font-family: "My Font";
+        font-size: 4em;  
+        font-weight: bolder;
+        animation: twinkle 0.5s linear 2;
+    }
+    
+    @keyframes twinkle {
+      0% {
+        opacity: 0.2;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0.2;
+      }
+    }
+    
+    /**4K 2690X1376**/
+    @media all and (max-width: 2691px) {
+        #gameclear  {
+            font-size: 9em;
+            top: 39%; left: 36%; margin-top: 0px; margin-left: 0px;
+        }
+    }
+    
+    /**Desktop 1920x1080**/
+    @media all and (max-width: 1921px){
+        #gameclear  {
+            font-size: 7em;
+            top: 39%; left: 37%; margin-top: 0px; margin-left: 2px;
+        }
+    }
+    
+    /**Laptop L 1440x740**/
+    @media all and (max-width: 1441px){
+        #gameclear  {
+            font-size: 5em;
+            top: 39%; left: 37%; margin-top: 0px; margin-left: 5px;
+        }
+    }
+    
+    /**My Laptop 1280x580**/
+    @media all and (max-width: 1281px){
+        #gameclear  {
+            font-size: 4em;
+            top: 38%; left: 39%; margin-top: 0px; margin-left: -40px;
+        }
+    }
+    
+    /**Laptop 1024X642**/
+    @media all and (max-width: 1025px){
+        #gameclear {
+            font-size: 4em;
+            top: 38%; left: 35%; margin-top: 0px; margin-left: 2px;
+        }
+    }
+    
+    /**Tablet 768X481**/
+    @media all and (max-width: 769px){
+        #gameclear  {
+            font-size: 3.5em;
+            top: 36%; left: 33%; margin-top: 0px; margin-left: 4px;
+        }
+    }
+    
+    /**Mobile L 425X481**/
+    @media all and (max-width: 426px){
+        #gameclear  {
+            font-size: 2.5em;
+            top: 36%; left: 28%; margin-top: 0px; margin-left: 0px;
+        }
+    }
+    
+    /**Mobile M 375X481**/
+    @media all and (max-width: 376px){
+        #gameclear  {
+            font-size: 2.5em;
+            top: 40%; left: 25%; margin-top: 0px; margin-left: 2px;
+        }
+    }
+    
+    /**Mobile S 320X481**/
+    @media all and (max-width: 321px){
+        #gameclear  {
+            font-size: 2em;
+            top: 40%; left: 25%; margin-top: 0px; margin-left: 8.5px;
+        }
+    }
+
+    #volume2 {
+    background-image: url("volume.png");
+    position: absolute;
+    background-color: none;
+    z-index: 10;
+    width: 480px;
+    height: 480px;
+}
+
+#volume2:hover {
+    cursor: pointer;
+}
+
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #volume2 {
+        transform: scale(0.22);
+        top: -9%; left: 87%; margin-top: 2px; margin-left: 0px;
+    }
+}
+
+/**Desktop 1920x1080**/
+@media all and (max-width: 1921px){
+    #volume2 {
+        transform: scale(0.18);
+        top: -12%; left: 82%; margin-top: 2px; margin-left: 0px;
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #volume2 {
+        transform: scale(0.14);
+        top: -22%; left: 79%; margin-top: 2px; margin-left: -5px;
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #volume2 {
+        transform: scale(0.1);
+        top: -32%; left: 77%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #volume2 {
+        transform: scale(0.1);
+        top: -28%; left: 71%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**Tablet 가로 768X481**/
+@media all and (max-width: 769px){
+    #volume2 {
+        transform: scale(0.08);
+        top: -40%; left: 63%; margin-top: -1px; margin-left: 0px;
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #volume2 {
+        transform: scale(0.07);
+        top: -40%; left: 34%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #volume2 {
+        transform: scale(0.065);
+        top: -41%; left: 27%; margin-top: -2px; margin-left: 0px;
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #volume2 {
+        transform: scale(0.06);
+        top: -41%; left: 15%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+#mute2 {
+    background-image: url("mute.png");
+    position: absolute;
+    background-color: none;
+    z-index: 10;
+    width: 448px;
+    height: 448px;
+}
+
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #mute2 {
+        transform: scale(0.22);
+        top: -8%; left: 87%; margin-top: 5px; margin-left: -2px;
+    }
+}
+
+/**Desktop 1920x1080**/
+@media all and (max-width: 1921px){
+    #mute2 {
+        transform: scale(0.18);
+        top: -10%; left: 82%; margin-top: -3px; margin-left: 1.5px;
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #mute2 {
+        transform: scale(0.14);
+        top: -20%; left: 79%; margin-top: 3px; margin-left: 0px;
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #mute2 {
+    transform: scale(0.1);
+    top: -29%; left:78%; margin-top: -1px; margin-left: -5px;
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #mute2 {
+        transform: scale(0.1);
+        top: -26%; left: 72%; margin-top: 3px; margin-left: -2px;
+    }
+}
+
+/**Tablet 가로 768X481**/
+@media all and (max-width: 769px){
+    #mute2 {
+        transform: scale(0.08);
+        top: -37%; left: 64%; margin-top: 0.5px; margin-left: 2.2px;
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #mute2 {
+        transform: scale(0.07);
+        top: -37%; left: 36%; margin-top: 1px; margin-left: 1.9px;
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #mute2 {
+        transform: scale(0.065);
+        top: -38%; left: 30%; margin-top: -0.5px; margin-left: -0.5px;
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #mute2 {
+        transform: scale(0.06);
+        top: -38%; left: 18%; margin-top: 1.5px; margin-left: 1.5px;
+    }
+}
+
+#mute2:hover {
+    cursor: pointer;
+}
+
+/**마지막 영상**/
+#character3 {
+    position: absolute;
+    z-index: 3;
+    background-image: url("walkingwithbaby.gif");
+    width: 490px;
+    height: 495px;
+}
+
+#character3 {
+    animation: character3 4s linear 1;
+    animation-fill-mode: both;
+}
+
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #character3 {
+        transform: scale(1.0);
+        top: 52%; left: -18%; margin-top: 7px; margin-left: -10px;
+    }
+    
+    @keyframes character3 {
+        0% {left:-18%;}
+        100% {left:31%;}
+    }
+}
+
+/**Desktop 1920x1080**/
+@media all and (max-width: 1921px){
+    #character3 {
+        transform: scale(0.75);
+        top: 46%; left: 21%; margin-top: 13px; margin-left:-51px;
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #character3 {
+        transform: scale(0.6);
+        top: 31%; left: 21%; margin-top: 16px; margin-left:-159px;
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #character3 {
+        transform: scale(0.4);
+        top: 26%; left: -23%; margin-top: 2px; margin-left: 0px;
+    }
+
+    @keyframes character3 {
+        0% {left:-23%;}
+        100% {left:19%;}
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #character3 {
+        transform: scale(0.4);
+        top: 33%; left: -30%; margin-top: 5px; margin-left: -21px;
+    }
+}
+
+/**Tablet 768X481**/
+@media all and (max-width: 769px){
+    #character3 {
+        transform: scale(0.35);
+        top: 18%; left: -50%; margin-top: -1px; margin-left: -84px;
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #character3 {
+        transform: scale(0.35);
+        top: 17%; left: -80%; margin-top: 0px; margin-left: 40px;
+    }
+    
+    @keyframes character3 {
+        0% {left:-80%;}
+        100% {left:-37%;}
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #character3 {
+        transform: scale(0.35);
+        top: 17%; left: -90%; margin-top: 1px; margin-left: -1px;
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #character3 {
+        transform: scale(0.25);
+        top: 24%; left: -90%; margin-top: 0px; margin-left: 12px;
+    }
+    
+    @keyframes character3 {
+        0% {left:-90%;}
+        100% {left:-52%;}
+    }
+}
+
+#pauseCharacter3 {
+    position: absolute;
+    z-index: 5;
+    background-image: url("pausecharacter.png");
+    width: 470px;
+    height: 484px;
+}
+
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #pauseCharacter3  {
+        transform: scale(1.0);
+        top: 52%; left: 31%; margin-top: 7px; margin-left: 4px;
+    }
+}
+
+/**Desktop 1920x1080**/
+@media all and (max-width: 1921px){
+    #pauseCharacter3  {
+        transform: scale(0.75);
+        top: 46%; left: 29%; margin-top: 13px; margin-left: 0px;
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #pauseCharacter3  {
+        transform: scale(0.6);
+        top: 33%; left: 21%; margin-top: 2px; margin-left: -2px;
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #pauseCharacter3  {
+        transform: scale(0.4);
+        top: 26%; left: 20%; margin-top: 5px; margin-left: -1px;
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #pauseCharacter3  {
+        transform: scale(0.4);
+        top: 33%; left: 16%; margin-top: 9px; margin-left: 21px;
+    }
+}
+
+/**Tablet 768X481**/
+@media all and (max-width: 769px){
+    #pauseCharacter3  {
+        transform: scale(0.35);
+        top: 18%; left: 9%; margin-top: 2px; margin-left: 3px;
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #pauseCharacter3  {
+        transform: scale(0.35);
+        top: 17%; left: -25%; margin-top: 4px; margin-left: 1px;
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #pauseCharacter3  {
+        transform: scale(0.35);
+        top: 17%; left: -35%; margin-top: 5px; margin-left: 2px;
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #pauseCharacter3  {
+        transform: scale(0.25);
+        top: 25%; left: -45%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+#cradle {
+    position: absolute;
+    z-index: 3;
+    background-image: url("cradle.png");
+    width: 364px;
+    height: 361px;
+}
+
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #cradle  {
+        transform: scale(1.0);
+        top: 65%; left: 45%; margin-top: 5px; margin-left: 0px;
+    }
+}
+
+/**Desktop 1920x1080**/
+@media all and (max-width: 1921px){
+    #cradle  {
+        transform: scale(0.75);
+        top: 60%; left: 43%; margin-top: 5px; margin-left: 0px;
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #cradle  {
+        transform: scale(0.6);
+        top: 49%; left: 40%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #cradle  {
+        transform: scale(0.45);
+        top: 43%; left: 36%; margin-top: 5px; margin-left: -1px;
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #cradle  {
+        transform: scale(0.4);
+        top: 50%; left: 35%; margin-top: 5px; margin-left: -1px;
+    }
+}
+
+/**Tablet 768X481**/
+@media all and (max-width: 769px){
+    #cradle  {
+        transform: scale(0.35);
+        top: 38%; left: 30%; margin-top: 6px; margin-left: 2px;
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #cradle  {
+        transform: scale(0.3);
+        top: 41%; left: 7%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #cradle  {
+        transform: scale(0.3);
+        top: 41%; left: 3%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #cradle  {
+        transform: scale(0.25);
+        top: 44%; left: -6%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+#cradlewithbaby {
+    position: absolute;
+    z-index: 8;
+    background-image: url("cradlewithbaby.png");
+    width: 364px;
+    height: 361px;
+}
+
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #cradlewithbaby  {
+        transform: scale(1.0);
+        top: 65%; left: 45%; margin-top: 5px; margin-left: 0px;
+    }
+}
+
+/**Desktop 1920x1080**/
+@media all and (max-width: 1921px){
+    #cradlewithbaby  {
+        transform: scale(0.75);
+        top: 60%; left: 43%; margin-top: 5px; margin-left: 0px;
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #cradlewithbaby  {
+        transform: scale(0.6);
+        top: 49%; left: 40%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #cradlewithbaby  {
+        transform: scale(0.45);
+        top: 42.9%; left: 35.9%; margin-top: 5px; margin-left: -1px;
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #cradlewithbaby  {
+        transform: scale(0.4);
+        top: 50%; left: 35%; margin-top: 5px; margin-left: -1px;
+    }
+}
+
+/**Tablet 768X481**/
+@media all and (max-width: 769px){
+    #cradlewithbaby  {
+        transform: scale(0.35);
+        top: 38%; left: 30%; margin-top: 6px; margin-left: 2px;
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #cradlewithbaby  {
+        transform: scale(0.3);
+        top: 41%; left: 7%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #cradlewithbaby  {
+        transform: scale(0.3);
+        top: 41%; left: 3%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #cradlewithbaby  {
+        transform: scale(0.25);
+        top: 44%; left: -6%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+#smileBaby {
+    position: absolute;
+    z-index: 8;
+    background-image: url("smileBaby.png");
+    width: 364px;
+    height: 361px;
+}
+
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #smileBaby  {
+        transform: scale(1.0);
+        top: 65%; left: 45%; margin-top: 5px; margin-left: 0px;
+    }
+}
+
+/**Desktop 1920x1080**/
+@media all and (max-width: 1921px){
+    #smileBaby  {
+        transform: scale(0.75);
+        top: 60%; left: 43%; margin-top: 5px; margin-left: 0px;
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #smileBaby  {
+        transform: scale(0.6);
+        top: 49%; left: 40%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #smileBaby  {
+        transform: scale(0.45);
+        top: 42.9%; left: 35.9%; margin-top: 5px; margin-left: -1px;
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #smileBaby  {
+        transform: scale(0.4);
+        top: 50%; left: 35%; margin-top: 5px; margin-left: -1px;
+    }
+}
+
+/**Tablet 768X481**/
+@media all and (max-width: 769px){
+    #smileBaby  {
+        transform: scale(0.35);
+        top: 38%; left: 30%; margin-top: 6px; margin-left: 2px;
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #smileBaby  {
+        transform: scale(0.3);
+        top: 41%; left: 7%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #smileBaby  {
+        transform: scale(0.3);
+        top: 41%; left: 3%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #smileBaby  {
+        transform: scale(0.25);
+        top: 44%; left: -6%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+#arrowBounce4 {
+    position: absolute;
+    z-index: 3;
+    background-image: url("arrow.png");
+    background-size: cover;
+    width: 83px;
+    height: 80px;
+    animation: bounce 2s infinite;
+    animation-play-state: running;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #arrowBounce4 {
+        width: 83px;
+        height: 80px;
+        top: 54%; left: 47%; margin-top: 4px; margin-left: -1px;
+    }
+}
+
+/**Desktop 1920x1080**/
+@media all and (max-width: 1921px){
+    #arrowBounce4 {
+        width: 53px;
+        height: 50px;
+        top: 55%; left: 50%; margin-top: 4px; margin-left: 8px;
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #arrowBounce4 {
+        width: 43px;
+        height: 40px;
+        top: 50%; left: 50%; margin-top: 0px; margin-left: -4px;
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #arrowBounce4 {
+        width: 27px;
+        height: 27px;
+        top: 47%; left: 37.4%; margin-top: 0px; margin-left: 10px;
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #arrowBounce4 {
+        width: 28px;
+        height: 28px;
+        top: 59%; left: 51%; margin-top: 0px; margin-left: -1px;
+    }
+}
+
+/**Tablet 가로 768X481**/
+@media all and (max-width: 769px){
+    #arrowBounce4 {
+        width: 23px;
+        height: 23px;
+        top: 54%; left: 50%; margin-top: 2px; margin-left: -4px;
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #arrowBounce4 {
+        width: 23px;
+        height: 23px;
+        top: 54%; left: 47%; margin-top: 0px; margin-left: 2px;
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #arrowBounce4 {
+        width: 23px;
+        height: 23px;
+        top: 54%; left: 47%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #arrowBounce4 {
+        width: 17px;
+        height: 17px;
+        top: 64%; left: 48%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+#ground3 {
+    position: absolute;
+    background-image: url("ground.png");
+    background-repeat: repeat-x;
+    width: 1920px;
+    height: 92px;
+    transform: scale(1.0);
+    top: 45%; left: 0%; margin-top: 1px; margin-left: 0px;
+}
+
+/**4K 2690X1376**/
+@media all and /**(min-width:1921px) and**/ (max-width: 2691px) {
+    #ground3 {
+        transform: scale(2.0);
+        top: 90%; left: 0%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**Desktop 1920x1080**/
+@media all and (max-width: 1921px){
+    #ground3 {
+        transform: scale(1.7);
+        top: 87%; left: 0%; margin-top: 17px; margin-left: 0px;
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #ground3 {
+        transform: scale(1.3);
+        top: 85%; left: 0%; margin-top: 6px; margin-left: 0px;
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #ground3 {
+        transform: scale(1.0);
+        top: 83%; left: 0%; margin-top: 7px; margin-left: 0px;
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #ground3 {
+        transform: scale(1.0);
+        top: 85%; left: 0%; margin-top: 5px; margin-left: 0px;
+    }
+}
+
+/**Tablet 가로 768X481**/
+@media all and (max-width: 769px){
+    #ground3 {
+        transform: scale(0.8);
+        top: 82%; left: -25%; margin-top: 5px; margin-left: 0px;
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #ground3 {
+        transform: scale(0.8);
+        top: 81%; left: -46%; margin-top: 9px; margin-left: 0px;
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #ground3 {
+        transform: scale(0.8);
+        top: 82%; left: -55%; margin-top: 4px; margin-left: 0px;
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #ground3 {
+        transform: scale(0.7);
+        top: 83%; left: -95%; margin-top: 4px; margin-left: 0px;
+    }
+}
+
+#justchar {
+    position: absolute;
+    z-index: 5;
+    background-image: url("justchar.png");
+    width: 433px;
+    height: 496px;
+}
+
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #justchar  {
+        transform: scale(1.0);
+        top: 52%; left: 33%; margin-top: 7px; margin-left: 4px;
+    }
+}
+
+/**Desktop 1920x1080**/
+@media all and (max-width: 1921px){
+    #justchar  {
+        transform: scale(0.75);
+        top: 46%; left: 31%; margin-top: 13px; margin-left: -2px;
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #justchar  {
+        transform: scale(0.6);
+        top: 33%; left: 23%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #justchar  {
+        transform: scale(0.4);
+        top: 25%; left: 22%; margin-top: 7px; margin-left: 1px;
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #justchar  {
+        transform: scale(0.4);
+        top: 33%; left: 21%; margin-top: 5px; margin-left: 0px;
+    }
+}
+
+/**Tablet 768X481**/
+@media all and (max-width: 769px){
+    #justchar {
+        transform: scale(0.35);
+        top: 17%; left: 13%; margin-top: 2px; margin-left: 0px;
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #justchar  {
+        transform: scale(0.35);
+        top: 16%; left: -19%; margin-top: 5px; margin-left: 1px;
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #justchar  {
+        transform: scale(0.35);
+        top: 17%; left: -27%; margin-top: 1px; margin-left: 2px;
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #justchar  {
+        transform: scale(0.25);
+        top: 24%; left: -37%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+#walkingmonster {
+    position: absolute;
+    z-index: 4;
+    background-image: url("walkingmonster.gif");
+    width: 504px;
+    height: 548px;
+}
+
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #walkingmonster  {
+        transform: scale(1.0);
+        top: 51%; left: 32%; margin-top: 6px; margin-left: 0px;
+    }
+
+    .walkingmonster {
+        animation: walkingmonster 5s linear 1;
+    }
+    
+    @keyframes walkingmonster {
+        0% {left: 32%}
+        100% {left: 94%;}
+    }
+}
+
+/**Desktop 1920x1080**/
+@media all and (max-width: 1921px){
+    #walkingmonster  {
+        transform: scale(0.75);
+        top: 46%; left: 29%; margin-top: 14px; margin-left: -50px;
+    }
+
+    .walkingmonster {
+        animation: walkingmonster 5s linear 1;
+    }
+    
+    @keyframes walkingmonster {
+        0% {left: 29%}
+        100% {left: 94%;}
+    }
+}
+
+/**Laptop L 1440x740**/
+@media all and (max-width: 1441px){
+    #walkingmonster  {
+        transform: scale(0.6);
+        top: 31%; left: 21%; margin-top: 0px; margin-left: -1px;
+    }
+
+   .walkingmonster {
+        animation: walkingmonster 5s linear 1;
+    }
+    
+    @keyframes walkingmonster {
+        0% {left: 21%}
+        100% {left: 90%;}
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #walkingmonster  {
+        transform: scale(0.4);
+        top: 22%; left: 85%; margin-top: 3px; margin-left: 8px;
+    }
+
+    .walkingmonster {
+        animation: walkingmonster 5s linear 1;
+    }
+    
+    @keyframes walkingmonster {
+        0% {left: 19%}
+        100% {left: 85%;}
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #walkingmonster  {
+        transform: scale(0.4);
+        top: 30%; left: 18%; margin-top: 3px; margin-left: 0px;
+    }
+}
+
+/**Tablet 768X481**/
+@media all and (max-width: 769px){
+    #walkingmonster {
+        transform: scale(0.35);
+        top: 13%; left: 9%; margin-top: 0px; margin-left: -2px;
+    }
+
+    .walkingmonster {
+        animation: walkingmonster 5s linear 1;
+    }
+    
+    @keyframes walkingmonster {
+        0% {left: 9%}
+        100% {left: 76%;}
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #walkingmonster  {
+        transform: scale(0.35);
+        top: 12%; left: -26%; margin-top: 4px; margin-left: 0px;
+    }
+
+    .walkingmonster {
+        animation: walkingmonster 5s linear 1;
+    }
+    
+    @keyframes walkingmonster {
+        0% {left: -26%}
+        100% {left: 56%;}
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #walkingmonster  {
+        transform: scale(0.35);
+        top: 12%; left: -36%; margin-top: 4px; margin-left: 3px;
+    }
+
+    .walkingmonster {
+        animation: walkingmonster 5s linear 1;
+    }
+    
+    @keyframes walkingmonster {
+        0% {left: -36%}
+        100% {left: 48%;}
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #walkingmonster  {
+        transform: scale(0.25);
+        top: 19%; left: -48%; margin-top: 0px; margin-left: 1px;
+    }
+
+    .walkingmonster {
+        animation: walkingmonster 5s linear 1;
+    }
+    
+    @keyframes walkingmonster {
+        0% {left: -48%}
+        100% {left: 34%;}
+    }
+}
+
+#reload {
+    position: absolute;
+    z-index: 10;
+    background-image: url("reload.png");
+    width: 159px;
+    height: 161px;
+}
+
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #reload  {
+        transform: scale(0.9);
+        top: 3%; left: 92%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**Desktop 1920x1080**/
+@media all and (max-width: 1921px){
+    #reload  {
+        transform: scale(0.7);
+        top: 2%; left: 90%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**Laptop L 1280x580**/
+@media all and (max-width: 1441px){
+    #reload  {
+        transform: scale(0.55);
+        top: 0%; left: 89%; margin-top: 0px; margin-left: 0px;
+    }
+    
+    #reload:hover {
+        transform: scale(0.58);
+        cursor: pointer;
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #reload  {
+        transform: scale(0.35);
+        top: -4%; left: 89%; margin-top: -1px; margin-left: 3px;
+    }
+    
+    #reload:hover {
+        transform: scale(0.38);
+        cursor: pointer;
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #reload  {
+        transform: scale(0.35);
+        top: -5%; left: 87%; margin-top: 1px; margin-left: 8px;
+    }
+    
+    #reload:hover {
+        transform: scale(0.38);
+        cursor: pointer;
+    }
+}
+
+/**Tablet 768X481**/
+@media all and (max-width: 769px){
+    #reload  {
+        transform: scale(0.3);
+        top: -9%; left: 85%; margin-top: 2px; margin-left: 0px;
+    }
+    
+    #reload:hover {
+        transform: scale(0.33);
+        cursor: pointer;
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #reload  {
+        transform: scale(0.25);
+        top: -10%; left: 74%; margin-top: 0px; margin-left: 0px;
+    }
+    
+    #reload:hover {
+        transform: scale(0.28);
+        cursor: pointer;
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #reload  {
+        transform: scale(0.25);
+        top: -10%; left: 71%; margin-top: 0px; margin-left: 0px;
+    }
+    
+    #reload:hover {
+        transform: scale(0.28);
+        cursor: pointer;
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #reload  {
+        transform: scale(0.25);
+        top: -10%; left: 66%; margin-top: 0px; margin-left: 0px;
+    }
+    
+    #reload:hover {
+        transform: scale(0.28);
+        cursor: pointer;
+    }
+}
+
+#point {
+    position: absolute;
+    z-index: 10;
+    background-image: url("point.png");
+    width: 175px;
+    height: 177px;
+}
+
+/**4K 2690X1376**/
+@media all and (max-width: 2691px) {
+    #point  {
+        transform: scale(0.7);
+        top: 62%; left: 44%; margin-top: 0px; margin-left: 2px;
+    }
+}
+
+/**Desktop 1920x1080**/
+@media all and (max-width: 1921px){
+    #point  {
+        transform: scale(0.6);
+        top: 58%; left: 43%; margin-top: 0px; margin-left: 2px;
+    }
+}
+
+/**Laptop L 1280x580**/
+@media all and (max-width: 1441px){
+    #point  {
+        transform: scale(0.45);
+        top: 50%; left: 42%; margin-top: 0px; margin-left: 2px;
+    }
+}
+
+/**My Laptop 1280x580**/
+@media all and (max-width: 1281px){
+    #point  {
+        transform: scale(0.35);
+        top: 50%; left: 38%; margin-top: 0px; margin-left: 5px;
+    }
+}
+
+/**Laptop 1024X642**/
+@media all and (max-width: 1025px){
+    #point  {
+        transform: scale(0.3);
+        top: 57%; left: 39%; margin-top: 0px; margin-left: 5px;
+    }
+}
+
+/**Tablet 768X481**/
+@media all and (max-width: 769px){
+    #point  {
+        transform: scale(0.3);
+        top: 50%; left: 37%; margin-top: 0px; margin-left: 0px;
+    }
+}
+
+/**Mobile L 425X481**/
+@media all and (max-width: 426px){
+    #point  {
+        transform: scale(0.3);
+        top: 53%; left: 20%; margin-top: 0px; margin-left: 5px;
+    }
+}
+
+/**Mobile M 375X481**/
+@media all and (max-width: 376px){
+    #point  {
+        transform: scale(0.22);
+        top: 52%; left: 18%; margin-top: 0px; margin-left: 5px;
+    }
+}
+
+/**Mobile S 320X481**/
+@media all and (max-width: 321px){
+    #point  {
+        transform: scale(0.2);
+        top: 56%; left: 12%; margin-top: 0px; margin-left: 5px;
+    }
+}
