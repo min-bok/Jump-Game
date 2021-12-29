@@ -1,5 +1,18 @@
-<img src="/readme_img/title.png" width="">
-
+<br>
+<br>
+<br>
+<br>
+<div align="center">
+  <img src="walkingwithbaby.gif" width="100px">
+</div>
+<br>
+<div align="center">
+  <img src="/readme_img/title.png" width="500px">
+</div>
+<br>
+<br>
+<br>
+<br>
 https://minbok-1998.github.io/Jump-Game/
 
 <Until Gameover>
