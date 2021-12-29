@@ -8,10 +8,13 @@
 <br>
 <div align="center">
   <img src="/readme_img/title.png" width="500px">
+  <p>장애물을 피해 아이를 구하고 목적지에 도달해보세요!</p>
 </div>
-<div align="center">
-  <img src="http://img.shields.io/badge/-START GAME-F29CA6?style=for-the-badge&&link=https://minbok-1998.github.io/Jump-Game/" width="150px">
+<br>
+<br>
+                                                                                                                             
 </div>
+
 <br>
 <br>
 <br>
@@ -31,3 +34,8 @@ PC 5종, Tablet 1종, Mobile 3종 등 총 9가지의 기기에 적합한 화면�
 포토샵, 일러스트레이터, Visual Studio Code
 
 ![w-lhy1](https://user-images.githubusercontent.com/81654172/146644964-87e8aa63-38cb-4644-b308-b9746dbde46b.png)
+  
+  <div align="center">
+  <a href="https://minbok-1998.github.io/Jump-Game/">
+    <img src="http://img.shields.io/badge/-Game Start-ffd452?style=for-the-badge?&link=https://minbok-1998.github.io/Jump-Game/" width="100px">
+  </a>  
