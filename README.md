@@ -10,7 +10,7 @@
   <img src="/readme_img/title.png" width="500px">
 </div>
 <div align="center">
-  <img src="http://img.shields.io/badge/-START GAME-F29CA6?style=for-the-badge&link=https://minbok-1998.github.io/Jump-Game/" width="150px">
+  <img src="http://img.shields.io/badge/-START GAME-F29CA6?style=for-the-badge&&link=https://minbok-1998.github.io/Jump-Game/" width="150px">
 </div>
 <br>
 <br>
