@@ -1,4 +1,4 @@
-<img src="" width="">
+<img src="/readme_img/title.png" width="">
 
 https://minbok-1998.github.io/Jump-Game/
 
