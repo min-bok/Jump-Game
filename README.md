@@ -16,6 +16,33 @@
 <p>게임의 디자인적 요소보다는 기능 구현에 중점을 두고 작업하였습니다.</p>
 <p>HTML, CSS, JavaScript를 사용하여 제작하였으며, 특히 JavaScript 기능을 중점적으로 활용하였습니다.</p>
 <p>PC 5종, Tablet 1종, Mobile 3종 등 총 9가지의 기기에 적합한 화면을 제공합니다.</p>
+<br>
+<h1>⏰ Make</h1>
+<P>졸업작품, 개인 프로젝트 입니다.</p>
+<h3>제작기간</h3>
+<P>2021.03 ~ 2021.10</p>
+
+<h3>기획</h3>
+<div>
+  <P>이혜영</p>
+  <img src="" width="">
+</div>
+  
+<h3>디자인</h3>
+<div>
+  <P>이혜영</p>
+  <img src="" width="">
+</div>
+  
+<h3>개발</h3>
+<div>
+  <P>이혜영</p>
+  <img src="" width="">
+</div>
+<br>
+<h1>🖥 Responsive</h1>
+
+
 
 
 <br>
@@ -26,7 +53,6 @@
 
 
 
-![w-lhy1](https://user-images.githubusercontent.com/81654172/146644964-87e8aa63-38cb-4644-b308-b9746dbde46b.png)
   
   <div align="center">
   <a href="https://minbok-1998.github.io/Jump-Game/">
