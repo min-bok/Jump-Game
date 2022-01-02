@@ -28,17 +28,17 @@
 
 <h3>기획</h3>
 <div>
-  이혜영 <img src="" width="">
+  이혜영 <img src="/readme_img.progressBar-6.gif" width="100px">
 </div>
   
 <h3>디자인</h3>
 <div>
-  이혜영 <img src="" width="">
+  이혜영 <img src="/readme_img.progressBar-6.gif" width="">
 </div>
   
 <h3>개발</h3>
 <div>
-  이혜영 <img src="" width="">
+  이혜영 <img src="/readme_img.progressBar-6.gif" width="">
 </div>
 <br>
 <h1>🖥 Responsive</h1>
