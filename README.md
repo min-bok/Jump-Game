@@ -27,20 +27,21 @@
 <P>HTML, CSS, JavaScript</p>
 
 <h3>기획</h3>
-
 <div>
-   <span width="20px" align='center'>이혜영</span> 
-   <img src="/readme_img/progressBar-6.gif" width="100px">
+   <span>이혜영</span> 
+   &nbsp<img src="/readme_img/progressBar-6.gif" width="100px">
 </div>
   
 <h3>디자인</h3>
 <div>
-  이혜영 <img src="/readme_img/progressBar-6.gif" width="100px">
+  이혜영 
+  &nbsp<img src="/readme_img/progressBar-6.gif" width="100px">
 </div>
   
 <h3>개발</h3>
 <div>
-  이혜영 <img src="/readme_img/progressBar-6.gif" width="100px">
+  이혜영 
+  &nbsp<img src="/readme_img/progressBar-6.gif" width="100px">
 </div>
 <br>
 <h1>🖥 Responsive</h1>
