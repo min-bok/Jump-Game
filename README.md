@@ -19,41 +19,64 @@
 <br>
 <h1>⏰ Make</h1>
 <P>졸업작품, 개인 프로젝트 입니다.</p>
+
 <h3>제작기간</h3>
 <P>2021.03 ~ 2021.10</p>
 
+<h3>사용 언어</h3>
+<P>HTML, CSS, JavaScript</p>
+
 <h3>기획</h3>
 <div>
-  <P>이혜영</p>
-  <img src="" width="">
+  이혜영 <img src="" width="">
 </div>
   
 <h3>디자인</h3>
 <div>
-  <P>이혜영</p>
-  <img src="" width="">
+  이혜영 <img src="" width="">
 </div>
   
 <h3>개발</h3>
 <div>
-  <P>이혜영</p>
-  <img src="" width="">
+  이혜영 <img src="" width="">
 </div>
 <br>
 <h1>🖥 Responsive</h1>
-
-
-
+<table>
+  <tr>
+    <th>PC</th>
+    <th>Tablet & Moblie</th>
+  </tr>
+  <tr>
+    <td>2690 x 1376</td>
+    <td>768 x 481</td>
+  </tr>
+  <tr>
+    <td>1920 x 1080</td>
+    <td>425 x 481</td>
+  </tr>
+  <tr>
+    <td>1440 x 740</td>
+    <td>375 x 481</td>
+  </tr>
+    <tr>
+    <td>1280 x 580</td>
+    <td>320 x 481</td>
+  </tr>
+      <tr>
+    <td>1042 x 642</td>
+  </tr>
+</table>
 
 <br>
 <h1>👀 How to play</h1>
+
 <br>
 <br>
 <br>
 
 
 
-  
   <div align="center">
   <a href="https://minbok-1998.github.io/Jump-Game/">
     <img src="http://img.shields.io/badge/-Game Start-ffd452?style=for-the-badge?&link=https://minbok-1998.github.io/Jump-Game/" width="100px">
