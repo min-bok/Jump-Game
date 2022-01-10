@@ -73,13 +73,37 @@
 
 <br>
 <h1>👀 How to play</h1>
-
+<br>
+<p>공룡이 혼자 있는 아이를 발견하면서 게임이 시작됩니다.<br>
+공룡은 아이를 안전한 곳에 데려다주기 위해 아이를 업고 모험을 시작합니다.</p>
+<img src="/readme_img/11.png" width="600px">
 <br>
 <br>
+<h2>🤍 Stage 01</h2>
+<p>달려오는 폭탄을 점프하여 피해야 합니다.<br>
+화면을 클릭하여 점프할 수 있습니다.</p>
+<img src="/readme_img/22.png" width="600px">
+<img src="/readme_img/33.png" width="600px">
 <br>
-
-
-
+<p>폭탄과 부딪히면 게임오버 됩니다.</p>
+<img src="/readme_img/44.png" width="600px">
+<br>
+<p>성공 횟수가 일정 숫자에 도달하면 다음 스테이지를 진행할 수 있습니다.</p>
+<img src="/readme_img/55.png" width="600px">
+<br>
+<br>
+<h2>🤍 Stage 02</h2>
+<p>상어를 피해 점프하며, 방울을 터뜨려 아이를 구해야 합니다.<br>
+PC에서는 키보드, Mobile에서는 터치로 방울을 터뜨릴 수 있습니다.</p>
+<br>
+<img src="/readme_img/66.png" width="600px">
+<img src="/readme_img/77.png" width="600px">
+<img src="/readme_img/88.png" width="600px">
+<br>
+<p>성공 횟수가 일정 숫자에 도달하면 엔딩을 볼 수 있습니다.</p>
+<img src="/readme_img/99.png" width="600px">
+<br>
+<br>
   <div align="center">
   <a href="https://minbok-1998.github.io/Jump-Game/">
     <img src="http://img.shields.io/badge/-Game Start-ffd452?style=for-the-badge?&link=https://minbok-1998.github.io/Jump-Game/" width="100px">
