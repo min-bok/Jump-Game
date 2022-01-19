@@ -17,32 +17,21 @@
 <p>HTML, CSS, JavaScript를 사용하여 제작하였으며, 특히 JavaScript 기능을 중점적으로 활용하였습니다.</p>
 <p>PC 5종, Tablet 1종, Mobile 3종 등 총 9가지의 기기에 적합한 화면을 제공합니다.</p>
 <br>
+
+<h1>👀 Demo</h1>
+<p>https://minbok-1998.github.io/Jump-Game/</p>
+
 <h1>⏰ Make</h1>
 <P>졸업작품, 개인 프로젝트 입니다.</p>
 
 <h3>제작기간</h3>
 <P>2021.03 ~ 2021.10</p>
 
-<h3>사용 언어</h3>
+<h3>Skills</h3>
 <P>HTML, CSS, JavaScript</p>
 
-<h3>기획</h3>
-<div>
+<h3>기획, 디자인, 개발</h3>
    <span>이혜영</span> 
-   &nbsp<img src="/readme_img/progressBar-6.gif" width="100px">
-</div>
-  
-<h3>디자인</h3>
-<div>
-  이혜영 
-  &nbsp<img src="/readme_img/progressBar-6.gif" width="100px">
-</div>
-  
-<h3>개발</h3>
-<div>
-  이혜영 
-  &nbsp<img src="/readme_img/progressBar-6.gif" width="100px">
-</div>
 <br>
 <h1>🖥 Responsive</h1>
 <table>
@@ -72,14 +61,14 @@
 </table>
 
 <br>
-<h1>👀 How to play</h1>
+<h1>🐱‍🐉 How to play</h1>
 <br>
 <p>공룡이 혼자 있는 아이를 발견하면서 게임이 시작됩니다.<br>
 공룡은 아이를 안전한 곳에 데려다주기 위해 아이를 업고 모험을 시작합니다.</p>
 <img src="/readme_img/11.png" width="600px">
 <br>
 <br>
-<h2>🤍 Stage 01</h2>
+<h2># Stage 01</h2>
 <p>달려오는 폭탄을 점프하여 피해야 합니다.<br>
 화면을 클릭하여 점프할 수 있습니다.</p>
 <img src="/readme_img/22.png" width="600px">
@@ -92,7 +81,7 @@
 <img src="/readme_img/55.png" width="600px">
 <br>
 <br>
-<h2>🤍 Stage 02</h2>
+<h2># Stage 02</h2>
 <p>상어를 피해 점프하며, 방울을 터뜨려 아이를 구해야 합니다.<br>
 PC에서는 키보드, Mobile에서는 터치로 방울을 터뜨릴 수 있습니다.</p>
 <br>
@@ -109,4 +98,3 @@ PC에서는 키보드, Mobile에서는 터치로 방울을 터뜨릴 수 있습�
     <img src="http://img.shields.io/badge/-Game Start-ffd452?style=for-the-badge?&link=https://minbok-1998.github.io/Jump-Game/" width="100px">
   </a>
     
-https://minbok-1998.github.io/Jump-Game/
